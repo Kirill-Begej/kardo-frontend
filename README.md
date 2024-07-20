@@ -7,6 +7,9 @@ ___
 ___
 ## Содержание
 - [Полезные ссылки](#полезные-ссылки)
+- [Установка проекта](#установка-проекта)
+- [Запуск проекта](#запуск-проекта)
+- [Проверка линтинга](#проверка-линтинга)
 ___
 
 ## Полезные ссылки
@@ -14,4 +17,66 @@ ___
 - [Техническое задание проекта](https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2F9c5K5%2FJFj4kcFJUw7Brc1Yeek0LmSwEEFqTQqq7OC4jeN6wS%2Fd2tKWH%2BAkOCRk%2Bhq%2FJ6bpmRyOJonT3VoXnDag%3D%3D&name=%D0%A2%D0%97%20%D0%9A%D0%90%D0%A0%D0%94%D0%9E.pdf)
 - [Дизайн-макет проекта](https://www.figma.com/design/AE3HDcsJW1TVgCAPs41hGM/%D0%9A%D0%90%D0%A0%D0%94%D0%9E?node-id=0-1&t=4d9uFUM08EaUvUH8-0)
 - [Miro проекта](https://miro.com/app/board/uXjVK1qJFAA=/)
+___
+
+## Установка проекта
+Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/en).  
+
+Клонируйте проект при помощи HTTPS:
+```sh
+$ git clone https://github.com/Kirill-Begej/kardo-frontend.git
+```
+
+Клонируйте проект при помощи SSH:
+```sh
+$ git clone git@github.com:Kirill-Begej/kardo-frontend.git
+```
+
+Для установки зависимостей, выполните команду:
+```sh
+$ npm i
+```
+___
+
+## Запуск проекта
+Чтобы запустить сервер для разработки, выполните команду:
+```sh
+npm run start
+```
+
+Чтобы выполнить development сборку, выполните команду: 
+```sh
+npm run build:dev
+```
+
+Чтобы выполнить production сборку, выполните команду: 
+```sh
+npm run build:prod
+```
+___
+
+## Проверка линтинга
+Для проверки TypeScript-файлов используется ESLint с конфигурацией airbnb-base.
+
+Чтобы проверить ts-файлы, выполните команду:
+```sh
+npm run lint:ts
+```
+
+Чтобы проверить ts-файлы и исправить их, выполните команду:
+```sh
+npm run lint:ts:fix
+```
+
+Для проверки CSS-файлов используется Stylelint.
+
+Чтобы проверить css-файлы, выполните команду:
+```sh
+npm run lint:css
+```
+
+Чтобы проверить css-файлы и исправить их, выполните команду:
+```sh
+npm run lint:css:fix
+```
 ___

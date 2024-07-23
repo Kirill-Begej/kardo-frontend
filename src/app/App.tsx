@@ -1,15 +1,14 @@
-import { Link } from 'react-router-dom';
+import './styles/index.css';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 
 const App = () => {
   return (
-    <>
-      <header>
-        <Link to='/'>Главная</Link>
-        <Link to='/test'>Тестовая</Link>
-      </header>
-      <AppRouter />
-    </>
+    <div className={classNames('app test', {}, [])}>
+      <div className={classNames('wrapper', {}, [])}>
+        <AppRouter />
+      </div>
+    </div>
   );
 };
 

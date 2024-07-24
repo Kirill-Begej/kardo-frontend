@@ -13,4 +13,7 @@
   height: 100%;
   max-width: 1024px;
   width: 100%;
+  font-family: var(--rubik-text-font);
+  font-weight: 300;
+  color: white;
 }

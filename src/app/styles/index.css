@@ -1,0 +1,19 @@
+@import 'reset';
+@import './variables/global.css';
+
+.app {
+  background-color: var(--primary-bg-color);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.wrapper {
+  height: 100%;
+  max-width: 1024px;
+  width: 100%;
+  font-family: var(--rubik-text-font);
+  font-weight: 300;
+  color: white;
+}

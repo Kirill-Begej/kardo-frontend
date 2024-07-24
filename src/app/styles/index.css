@@ -14,3 +14,9 @@
   max-width: 1024px;
   width: 100%;
 }
+
+.test {
+  color: white;
+  font-size: 50px;
+  font-family: var(--font-rubik-bold);
+}

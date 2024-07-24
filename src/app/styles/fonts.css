@@ -1,0 +1,39 @@
+@font-face {
+    src:
+        url('../../shared/assets/fonts/GrtskTera-Light.woff2') format('woff2'),
+        url('../../shared/assets/fonts/GrtskTera-Light.woff') format('woff');
+    font-family: 'Grtsk-Tera-Light';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src:
+        url('../../shared/assets/fonts/GrtskTera-Bold.woff2') format('woff2'),
+        url('../../shared/assets/fonts/GrtskTera-Bold.woff') format('woff');
+    font-family: 'Grtsk-Tera-Bold';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src:
+        url('../../shared/assets/fonts/Rubik-SemiBold.woff2') format('woff2'),
+        url('../../shared/assets/fonts/Rubik-SemiBold.woff') format('woff');
+    font-family: 'Rubik-SemiBold';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src:
+        url('../../shared/assets/fonts/Rubik-Bold.woff2') format('woff2'),
+        url('../../shared/assets/fonts/Rubik-Bold.woff') format('woff');
+    font-family: 'Rubik-Bold';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

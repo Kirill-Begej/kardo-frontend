@@ -1,3 +1,12 @@
+@keyframes fillAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
 .onboard {
     /* max-width: 390px;
     margin: 0 auto;
@@ -82,7 +91,10 @@
 
 .slide.active {
     width: 72px;
-    background-color: var(--primary-font-color);
+    background: linear-gradient(to right, var(--secondary-font-color) 50%, var(--primary-font-color) 50%);
+    background-size: 200%;
+    border-radius: 10px;
+    animation: fillAnimation 7s linear forwards;
 }
 
 

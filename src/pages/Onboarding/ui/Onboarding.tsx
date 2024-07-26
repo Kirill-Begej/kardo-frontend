@@ -20,7 +20,7 @@ export const Onboarding: FC = () => {
   useEffect(() => {
     const changeSlide = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % OnboadringItems.length);
-    }, 2000);
+    }, 7000);
 
     return () => clearInterval(changeSlide);
   }, []);

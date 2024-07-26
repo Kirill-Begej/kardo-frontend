@@ -1,0 +1,17 @@
+.close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 82px;
+  right: 17px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.closeIcon {
+  stroke: var(--secondary-font-color);
+}

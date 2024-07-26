@@ -6,15 +6,19 @@ ___
 Проект в процессе разработки.
 ___
 ## Содержание
+- [Сведения о команде](#Сведения-о-команде)
 - [Полезные ссылки](#полезные-ссылки)
 - [Установка проекта](#установка-проекта)
 - [Запуск проекта](#запуск-проекта)
 - [Проверка линтинга](#проверка-линтинга)
 ___
+## Сведения о команде
+
+___
 
 ## Полезные ссылки
 - [Страница онбординга проекта](https://norikov.notion.site/568508697c74422d8077142bb7449791)
-- [Техническое задание проекта](https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2F9c5K5%2FJFj4kcFJUw7Brc1Yeek0LmSwEEFqTQqq7OC4jeN6wS%2Fd2tKWH%2BAkOCRk%2Bhq%2FJ6bpmRyOJonT3VoXnDag%3D%3D&name=%D0%A2%D0%97%20%D0%9A%D0%90%D0%A0%D0%94%D0%9E.pdf)
+- [Техническое задание проекта](https://disk.yandex.ru/d/fikfo1dHbaYXIw)
 - [Дизайн-макет проекта](https://www.figma.com/design/AE3HDcsJW1TVgCAPs41hGM/%D0%9A%D0%90%D0%A0%D0%94%D0%9E?node-id=0-1&t=4d9uFUM08EaUvUH8-0)
 - [Miro проекта](https://miro.com/app/board/uXjVK1qJFAA=/)
 ___
@@ -51,7 +55,7 @@ npm run build:dev
 
 Чтобы выполнить production сборку используйте команду: 
 ```sh
-npm run build:prod
+npm run build
 ```
 ___
 

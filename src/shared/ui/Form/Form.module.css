@@ -32,6 +32,10 @@
   width: 350px;
 }
 
+.formRegister {
+  margin-top: 85px;
+}
+
 .subtitle {
   max-width: 24px;
   font-size: 12px;
@@ -94,7 +98,27 @@
   line-height: 15px;
   font-family: var(--font-rubik-medium);
   margin: 12px auto 0;
+  display: flex;
+  gap: 4px;
+  max-width: 207px;
   color: #6D6D6D;
+}
+
+.condition {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: var(--font-rubik-medium);
+  margin: 5px auto 0;
+  color: #6D6D6D;
+  display: flex;
+  flex-direction: column;
+}
+
+.conditionLink {
+  color: #F1F1F1;
+  margin: 0;
+  text-decoration: none;
+  font-family: var(--font-rubik-semibold);
 }
 
 .link {

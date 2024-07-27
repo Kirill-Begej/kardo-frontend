@@ -15,17 +15,23 @@ interface FormProps {
   link: string;
   to: string;
   isLogin: boolean;
+  isRegister: boolean;
 }
 
 export const Form: FC<FormProps> = ({
-  children, auth, link, to, isLogin,
+  children, auth, link, to, isLogin, isRegister,
 }) => {
   return (
     <section className={styles.section}>
       <article className={styles.container}>
         <MainIcon />
-        <form className={styles.form}>
+        <form className={`${styles.form} ${isLogin ? '' : styles.formRegister}`}>
           {children}
+          {isRegister
+            ? <p className={styles.condition}>Создавая аккаунт, Вы принимаете
+              <Link to={to} className={styles.conditionLink}>Условия использования</Link>
+            </p>
+            : null}
           <p className={styles.subtitle}>Или</p>
           <ul className={styles.list}>
             <li className={styles.block}>

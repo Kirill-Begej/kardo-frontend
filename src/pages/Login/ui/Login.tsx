@@ -5,10 +5,11 @@ import { Form } from '../../../shared/ui/Form';
 export const Login = () => {
   return (
     <Form
-      auth='Ещё нет аккаунта? '
+      auth='Ещё нет аккаунта?'
       link='Зарегистрироваться'
       to='/signup'
       isLogin={true}
+      isRegister={false}
     >
       <Input placeholder='E-mail' />
       <Input placeholder='Пароль' />

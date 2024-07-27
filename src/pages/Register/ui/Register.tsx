@@ -5,10 +5,11 @@ import { Form } from '../../../shared/ui/Form';
 export const Register = () => {
   return (
     <Form
-      auth='Создавая аккаунт, Вы принимаете '
-      link='Условия использования'
+      auth='Уже есть аккаунт?'
+      link='Войти'
       to='/sign-in'
       isLogin={false}
+      isRegister={true}
     >
       <Input placeholder='Имя' />
       <Input placeholder='E-mail' />

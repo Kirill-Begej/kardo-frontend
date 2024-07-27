@@ -1,0 +1,124 @@
+.section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--navbar-bg-color);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--navbar-bg-color);
+  color: #F1F1F1;
+  align-items: center;
+  text-align: center;
+  padding-top: 147px;
+  position: relative;
+}
+
+.logo {
+  width: 97px;
+  height: 97px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 102px auto;
+  width: 350px;
+}
+
+.subtitle {
+  max-width: 24px;
+  font-size: 12px;
+  line-height: 120%;
+  font-family: var(--font-rubik-medium);
+  position: relative;
+  margin: 35px auto 0;
+}
+
+.subtitle::before {
+  content: '';
+  display: block;
+  width: 114px;
+  height: 1px;
+  background: gray;
+  position: absolute;
+  left: 43px;
+  top: 50%;
+}
+
+.subtitle::after {
+  content: '';
+  display: block;
+  width: 114px;
+  height: 1px;
+  background: gray;
+  position: absolute;
+  right: 43px;
+  top: 50%;
+}
+
+.list {
+  max-width: 350px;
+  margin: 18px auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+.block {
+  width: 171px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid #474747;
+  padding: 8px 24px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: var(--font-rubik-medium);
+}
+
+.textLink {
+  font-size: 12px;
+  line-height: 15px;
+  font-family: var(--font-rubik-medium);
+  margin: 12px auto 0;
+  color: #6D6D6D;
+}
+
+.link {
+  color: #F1F1F1;
+  text-decoration: none;
+  font-family: var(--font-rubik-semibold);
+}
+
+.password {
+  margin: 12px auto;
+  padding: 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: var(--font-rubik-medium);
+  text-decoration: none;
+  color: #F1F1F1;
+}
+
+.skip {
+  position: absolute;
+  top: 59px;
+  right: 20px;
+  font-size: 14px;
+  color: #A3A3A3;
+  text-decoration: none;
+  font-family: var(--font-rubik-medium);
+}

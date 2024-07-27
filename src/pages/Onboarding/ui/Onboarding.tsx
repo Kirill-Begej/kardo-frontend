@@ -1,13 +1,3 @@
-/*
-    1. слайдер пока тестовый, без анимации и остановок.
-    2. Переход обычный, меняется картинки и текст. +
-    3. вынести button в отдельный компонент и edit --> <Link>
-    4. добавить анимации заполнение для slide
-    5. с помощью непрерывного пробела, исправить текстовые теги для pixelPerfect
-    6. max-width: 1024px страницы.
-    7. padding-bottom: %;
-*/
-
 import { FC, useEffect, useState } from 'react';
 import styles from './Onboarding.module.css';
 
@@ -16,6 +6,19 @@ import { OnboadringItems } from './OnboardingItems';
 
 export const Onboarding: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const changeSlide = () => {
+    switch (currentSlide) {
+      case 2:
+        return styles.thirdSlide;
+      case 3:
+        return styles.fourthSlide;
+      case 4:
+        return styles.fifthSlide;
+      default:
+        return '';
+    }
+  }
 
   useEffect(() => {
     const changeSlide = setInterval(() => {
@@ -27,7 +30,7 @@ export const Onboarding: FC = () => {
 
   return (
         <section className={styles.onboard}>
-            <article className={`${styles.container} ${currentSlide === 3 ? styles.fourthSlide : ''}`} style={{ backgroundImage: `url(${OnboadringItems[currentSlide].image})` }}>
+            <article className={`${styles.container} ${changeSlide()}`} style={{ backgroundImage: `url(${OnboadringItems[currentSlide].image})` }}>
                 {/* <div className={styles.gradient}></div> */}
                 <div className={styles.slider}>
                     {OnboadringItems.map((_, i) => (

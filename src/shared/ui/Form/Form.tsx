@@ -28,9 +28,12 @@ export const Form: FC<FormProps> = ({
         <form className={`${styles.form} ${isLogin ? '' : styles.formRegister}`}>
           {children}
           {isRegister
-            ? <p className={styles.condition}>Создавая аккаунт, Вы принимаете
-              <Link to={to} className={styles.conditionLink}>Условия использования</Link>
-            </p>
+            ?
+            <div className={styles.content}> 
+              <p className={styles.condition}>Создавая аккаунт, Вы принимаете
+                <Link to={to} className={styles.conditionLink}>Условия использования</Link>
+              </p>
+            </div>
             : null}
           <p className={styles.subtitle}>Или</p>
           <ul className={styles.list}>

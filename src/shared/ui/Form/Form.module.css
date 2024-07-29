@@ -104,6 +104,12 @@
   color: #6D6D6D;
 }
 
+.content {
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .condition {
   font-size: 12px;
   line-height: 15px;

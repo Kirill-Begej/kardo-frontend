@@ -1,24 +1,24 @@
 import { RouteProps } from 'react-router-dom';
-import { MainPage } from 'pages/MainPage';
-import { TestPage } from 'pages/TestPage';
+import { News } from 'pages/News';
+import { CurrentNews } from 'pages/CurrentNews';
 
 export enum AppRoutes {
-  MAIN = 'main',
-  TEST = 'test',
+  NEWS = 'news',
+  CURRENTNEWS = 'currentnews',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
-  [AppRoutes.TEST]: '/test',
+  [AppRoutes.NEWS]: '/',
+  [AppRoutes.CURRENTNEWS]: '/current',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAIN]: {
-    path: RoutePath.main,
-    element: <MainPage />,
+  [AppRoutes.NEWS]: {
+    path: RoutePath.news,
+    element: <News />,
   },
-  [AppRoutes.TEST]: {
-    path: RoutePath.test,
-    element: <TestPage />,
+  [AppRoutes.CURRENTNEWS]: {
+    path: RoutePath.currentnews,
+    element: <CurrentNews />,
   },
 };

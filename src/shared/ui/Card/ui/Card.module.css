@@ -1,0 +1,40 @@
+.card {
+  max-width: 350px;
+  display: flex;
+  padding: 20px 12px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  background-color: #1B1B1B;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.cardImage {
+  width: 322px;
+  height: 121px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+}
+
+.cardHeading {
+  max-width: 326px;
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  font-family: var(--font-grtsk-tera-bold);
+  color: #FF4310;
+}
+
+.cardSubtitle {
+  max-width: 326px;
+  width: 100%;
+  font-size: 14px;
+  margin: 0;
+  font-family: var(--font-rubik-regular);
+}
+
+.cardLink {
+  margin-left: auto;
+}

@@ -13,8 +13,8 @@ interface ImageBlockProps {
 export const ImageBlock: FC<ImageBlockProps> = ({ isImage, name }) => {
   return (
     <Section pixelPerfect={true}>
-            <Titles isLink={false} name={name} />
-            <img className={styles.cardImage} src={isImage ? imageWaiting : imageCard} />
-          </Section>
+      <Titles isLink={false} name={name} />
+      <img className={styles.cardImage} src={isImage ? imageWaiting : imageCard} />
+    </Section>
   );
 };

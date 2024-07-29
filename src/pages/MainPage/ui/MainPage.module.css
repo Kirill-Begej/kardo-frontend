@@ -1,0 +1,99 @@
+.main {
+  width: 100%;
+  height: 250vh;
+  background-color: #151515;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin: 16px auto 0;
+  padding: 11px 25px;
+  font-size: 16px;
+  line-height: normal;
+  font-family: var(--font-grtsk-tera-bold);
+  color: #F1F1F1;
+  width: 350px;
+  border-radius: 2px;
+  border: 1px solid #FF4310;
+  background: #151515;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  overflow: scroll hidden;
+  display: flex;
+  gap: 12px;
+  width: 370px; 
+  flex-wrap: nowrap;
+  margin: 12px auto 0;
+}
+
+.slide {
+  flex: 0 0 200px;
+  height: 130px;
+  background-image: url('../../../shared/assets/images/slide.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0;
+}
+
+.direction {
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.player {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.video {
+  width: 200px;
+  height: 110px;
+  border-radius: 4px;
+  background: linear-gradient(0deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 40%) 100%), url('../../../shared/assets/images/videoImage.png') lightgray 50% / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subittle {
+  font-family: var(--font-grtsk-tera-light);
+  font-size: 12px;
+  line-height: 15px;
+  max-width: 200px;
+  margin: 8px 0 0;
+}
+
+.cardImage {
+  width: 350px;
+  height: 85px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 12px;
+  border-radius: 4px;
+}

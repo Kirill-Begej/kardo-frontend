@@ -3,10 +3,11 @@ import styles from './ButtonAuth.module.css';
 
 interface ButtonProps {
   name?: string;
+  isValid: boolean;
 }
 
-export const ButtonAuth: FC<ButtonProps> = ({ name }) => {
+export const ButtonAuth: FC<ButtonProps> = ({ name, isValid }) => {
   return (
-    <button className={styles.button}>{name}</button>
+    <button disabled={!isValid} className={`${styles.button} ${!isValid ? styles.buttonError : ''}`}>{name}</button>
   );
 };

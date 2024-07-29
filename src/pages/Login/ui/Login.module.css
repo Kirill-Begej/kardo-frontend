@@ -1,0 +1,6 @@
+.error {
+  color: red;
+  opacity: .7;
+  font-size: 12px;
+  font-family: var(--font-rubik-light);
+}

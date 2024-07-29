@@ -13,3 +13,8 @@
   font-family: var(--font-rubik-medium);
   cursor: pointer;
 }
+
+.buttonError {
+  background-color: #525252;
+  color: #F1F1F1;
+}

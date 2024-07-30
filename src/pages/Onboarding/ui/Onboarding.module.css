@@ -10,6 +10,7 @@
 
 .onboard {
   height: 100vh;
+  position: relative;
   width: 100%;
 }
 
@@ -95,7 +96,7 @@
   width: 32px;
 }
 
-.positionup {
+.positionUp {
   position: relative;
   z-index: 10;
 }

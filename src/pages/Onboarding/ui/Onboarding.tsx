@@ -40,7 +40,7 @@ export const Onboarding: FC = ({ className }: OnboardingProps) => {
       >
         <div className={classNames(cls.wrap, {}, [])}>
           <div className={classNames(cls.gradient, {}, [])}></div>
-          <div className={classNames(cls.slider, {}, [`${cls.positionup}`])}>
+          <div className={classNames(cls.slider, {}, [cls.positionUp])}>
             {OnboadringItems.map((_, i) => (
               <div
                 key={i}
@@ -48,7 +48,7 @@ export const Onboarding: FC = ({ className }: OnboardingProps) => {
               ></div>
             ))}
           </div>
-          <div className={classNames(cls.info, {}, [`${cls.positionup}`])}>
+          <div className={classNames(cls.info, {}, [cls.positionUp])}>
             <h1 className={classNames(cls.title, {}, [])}>
               {OnboadringItems[currentSlide].title}
             </h1>
@@ -57,7 +57,7 @@ export const Onboarding: FC = ({ className }: OnboardingProps) => {
             </p>
           </div>
         </div>
-        <CloseLink />
+        <CloseLink to='/' />
       </div>
     </section>
   );

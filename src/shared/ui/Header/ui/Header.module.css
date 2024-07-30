@@ -1,9 +1,16 @@
 .header {
   margin: 0 auto;
-  padding-top: 25px;
+  width: 100%;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding-top: 58px;
+  display: flex;
   max-width: 350px;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -23,6 +30,6 @@
 
 .link {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 56px;
+  left: 0px;
 }

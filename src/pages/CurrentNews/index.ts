@@ -1,1 +1,1 @@
-export { CurrentNews } from './ui/CurrentNews';
+export { CurrentNewsAsync as CurrentNews } from './ui/CurrentNews.async';

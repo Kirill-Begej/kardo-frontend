@@ -1,11 +1,17 @@
 import { Header } from 'shared/ui/Header';
 import styles from './CurrentNews.module.css';
 import { CurrentNewsBlock } from './CurrentNewsBlock';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 
-export const CurrentNews = () => {
+interface CurrentNewsProps {
+  className?: string;
+}
+
+const CurrentNews: FC<CurrentNewsProps> = ({ className }) => {
   return (
-    <div className={styles.content}>
-      <section className={styles.container}>
+    <div className={classNames(styles.news, {}, [className])}>
+      <section className={classNames(styles.container, {}, [])}>
         <Header name='Новости' />
         <main>
           <CurrentNewsBlock />
@@ -14,3 +20,5 @@ export const CurrentNews = () => {
     </div>
   );
 };
+
+export default CurrentNews;

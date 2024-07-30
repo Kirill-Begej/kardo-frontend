@@ -1,0 +1,13 @@
+.dropdown {
+  max-width: 115px;
+  position: relative;
+}
+
+.select {
+  border-radius: 2px;
+  border: 1px solid #FF4310;
+  background-color: #151515;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}

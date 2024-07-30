@@ -1,109 +1,109 @@
-@keyframes slideAnimation {
-    0% {
-        background-position: 100% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
+@keyframes slide-animation {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .onboard {
-    /* max-width: 390px;
-    margin: 0 auto;
-    padding: 0; */
-    width: 100%;
-    height: 100vh;
+  height: 100vh;
+  width: 100%;
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 75px;
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+  align-items: end;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .thirdSlide {
-    background-position: 45% top;
+  background-position: 45% top;
 }
 
 .fifthSlide {
-    background-position: 55% 50%;
+  background-position: 55% 50%;
 }
 
 .fourthSlide {
-    background-position: 58% 50%;
+  background-position: 58% 50%;
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 68px;
+  padding-top: 25px;
+  position: relative;
+  width: 100%;
 }
 
 .gradient {
-    position: absolute;
-    top: 372px;
-    left: 0;
-    right: 0;
-    height: calc(844px - 372px); 
-    background: linear-gradient(0deg, rgb(21 21 21 / 90%) 50.95%, rgb(21 21 21 / 0%) 99.7%);
-    background-blend-mode: multiply; /* здесь надо будет св-во поменять, так как в figma св-ва нет */
-    z-index: 1; 
+  background: linear-gradient(0deg, rgb(21 21 21 / 90%) 91%, rgb(21 21 21 / 0%) 100%);
+  inset: 0;
+  position: absolute;
+  z-index: 5;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 350px;
-    gap: 16px;
-    flex: 0 1 126px;
-    line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 126px;
+  gap: 16px;
+  line-height: 1.25;
+  max-width: 350px;
+  text-align: center;
 }
 
 .title {
-    max-width: 350px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    font-family: var(--font-grtsk-tera-bold);
-    color: var(--primary-font-color);
+  color: var(--primary-font-color);
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .subtitle {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-rubik-semibold);
-    color: var(--secondary-font-color);
-    font-size: 16px;
-    max-width: 350px;
-    width: 100%;
-    letter-spacing: -0.02em;
+  color: var(--secondary-font-color);
+  font-family: var(--font-rubik-semibold);
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
 }
 
 .slider {
-    max-width: 248px;
-    display: flex;
-    gap: 12px;
-    padding-bottom: 9.4vh;
+  display: flex;
+  gap: 12px;
+  max-width: 248px;
+  padding-bottom: 9.4vh;
 }
 
 .slide {
-    width: 32px;
-    height: 4px;
-    background-color: var(--secondary-font-color);
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
+  background-color: var(--secondary-font-color);
+  border-radius: 10px;
+  height: 4px;
+  transition: width 0.5s ease-in-out;
+  width: 32px;
 }
 
-.slide.active {
-    width: 72px;
-    background: linear-gradient(to left, var(--secondary-font-color) 50%, var(--primary-font-color) 50%);
-    background-size: 200%;
-    border-radius: 10px;
-    animation: slideAnimation 7s linear forwards;
+.positionup {
+  position: relative;
+  z-index: 10;
 }
 
-
+.active {
+  animation: slide-animation 7s linear forwards;
+  background-image: linear-gradient(to left, var(--secondary-font-color) 50%, var(--primary-font-color) 50%);
+  background-size: 200%;
+  border-radius: 10px;
+  width: 72px;
+}

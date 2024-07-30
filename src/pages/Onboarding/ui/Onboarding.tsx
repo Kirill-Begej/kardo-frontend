@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import cls from './Onboarding.module.css';
-import { CloseLink } from '../../../shared/ui/CloseLink/CloseLink';
 import { OnboadringItems } from './OnboardingItems';
 
 interface OnboardingProps {
@@ -33,30 +33,32 @@ export const Onboarding: FC = ({ className }: OnboardingProps) => {
   }, []);
 
   return (
-        <section className={classNames(cls.onboard, {}, [className])}>
-            <article
-              className={classNames(cls.container, {}, [className, changeSlide()])}
-              style={ { backgroundImage: `url(${OnboadringItems[currentSlide].image})` }}
-            >
-                {/* <div className={cls.gradient}></div> */}
-                <div className={classNames(cls.slider, {}, [className])}>
-                    {OnboadringItems.map((_, i) => (
-                        <div
-                        key={i}
-                        className={classNames(cls.slide, {}, [className, i === currentSlide ? cls.active : ''])}
-                        ></div>
-                    ))}
-                </div>
-                <div className={classNames(cls.info, {}, [className])}>
-                    <h1 className={classNames(cls.title, {}, [className])}>
-                      {OnboadringItems[currentSlide].title}
-                    </h1>
-                    <p className={classNames(cls.subtitle, {}, [className])}>
-                      {OnboadringItems[currentSlide].subtitle}
-                    </p>
-                </div>
-                <CloseLink />
-            </article>
-        </section>
+    <section className={classNames(cls.onboard, {}, [className])}>
+      <div
+        className={classNames(cls.container, {}, [changeSlide()])}
+        style={{ backgroundImage: `url(${OnboadringItems[currentSlide].image})` }}
+      >
+        <div className={classNames(cls.wrap, {}, [])}>
+          <div className={classNames(cls.gradient, {}, [])}></div>
+          <div className={classNames(cls.slider, {}, [`${cls.positionup}`])}>
+            {OnboadringItems.map((_, i) => (
+              <div
+                key={i}
+                className={classNames(cls.slide, {}, [i === currentSlide ? cls.active : ''])}
+              ></div>
+            ))}
+          </div>
+          <div className={classNames(cls.info, {}, [`${cls.positionup}`])}>
+            <h1 className={classNames(cls.title, {}, [])}>
+              {OnboadringItems[currentSlide].title}
+            </h1>
+            <p className={classNames(cls.subtitle, {}, [])}>
+              {OnboadringItems[currentSlide].subtitle}
+            </p>
+          </div>
+        </div>
+        <CloseLink />
+      </div>
+    </section>
   );
 };

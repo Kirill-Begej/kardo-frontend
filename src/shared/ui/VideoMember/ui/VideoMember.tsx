@@ -1,5 +1,5 @@
-import styles from './VideoMember.module.css';
 import PlayVideo from 'shared/assets/images/icons/playVideo.svg';
+import styles from './VideoMember.module.css';
 
 export const VideoMember = () => {
   return (
@@ -11,5 +11,5 @@ export const VideoMember = () => {
       </div>
       <p className={styles.name}>Владимир Пономаренко</p>
     </div>
-  )
-}
+  );
+};

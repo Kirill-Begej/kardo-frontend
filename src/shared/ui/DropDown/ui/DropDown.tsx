@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import styles from './DropDown.module.css';
 import ArrowClose from 'shared/assets/images/icons/arrow_dropdown_close.svg';
-
+import styles from './DropDown.module.css';
 
 interface DropDownProps {
   isOpen?: boolean;
@@ -24,5 +23,5 @@ export const DropDown: FC<DropDownProps> = ({ isOpen, onOpen, name }) => {
         <li className={styles.item}>Культурная программа</li>
       </ul>
     </div>
-  )
-}
+  );
+};

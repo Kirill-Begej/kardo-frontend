@@ -7,7 +7,7 @@
 
 .player {
   background: 
-      linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('../../../assets/images/video.png'), lightgray 50%;
+      linear-gradient(0deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 40%) 100%), url('../../../assets/images/video.png'), lightgray 50%;
   background-position: center;
   background-size: cover;
   width: 100%;

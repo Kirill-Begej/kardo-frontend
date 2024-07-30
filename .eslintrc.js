@@ -37,5 +37,6 @@ module.exports = {
       devDependencies: true,
     }],
     '@typescript-eslint/no-shadow': 0,
+    'global-require': 0,
   },
 };

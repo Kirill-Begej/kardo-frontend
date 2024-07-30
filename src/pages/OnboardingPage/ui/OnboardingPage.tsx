@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import cls from './OnboardingPage.module.css';
-import { OnboadringItems } from './OnboardingItems';
+import { onboardingPageData } from '../model/onboardingPageData';
 
 interface OnboardingProps {
   className?: string;
@@ -26,7 +26,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
 
   useEffect(() => {
     const changeSlide = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % OnboadringItems.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % onboardingPageData.length);
     }, 7000);
 
     return () => clearInterval(changeSlide);
@@ -36,12 +36,12 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
     <section className={classNames(cls.onboard, {}, [className])}>
       <div
         className={classNames(cls.container, {}, [changeSlide()])}
-        style={{ backgroundImage: `url(${OnboadringItems[currentSlide].image})` }}
+        style={{ backgroundImage: onboardingPageData[currentSlide].image }}
       >
         <div className={classNames(cls.wrap, {}, [])}>
           <div className={classNames(cls.gradient, {}, [])}></div>
           <div className={classNames(cls.slider, {}, [cls.positionUp])}>
-            {OnboadringItems.map((_, i) => (
+            {onboardingPageData.map((_, i) => (
               <div
                 key={i}
                 className={classNames(cls.slide, {}, [i === currentSlide ? cls.active : ''])}
@@ -49,11 +49,11 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
             ))}
           </div>
           <div className={classNames(cls.info, {}, [cls.positionUp])}>
-            <h1 className={classNames(cls.title, {}, [])}>
-              {OnboadringItems[currentSlide].title}
-            </h1>
+            <h2 className={classNames(cls.title, {}, [])}>
+              {onboardingPageData[currentSlide].title}
+            </h2>
             <p className={classNames(cls.subtitle, {}, [])}>
-              {OnboadringItems[currentSlide].subtitle}
+              {onboardingPageData[currentSlide].subtitle}
             </p>
           </div>
         </div>

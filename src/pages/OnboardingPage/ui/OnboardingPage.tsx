@@ -24,7 +24,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const changeSlide = () => {
+  const changeSlideClassName = () => {
     switch (currentSlide) {
       case 2:
         return cls.thirdSlide;
@@ -36,10 +36,17 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
         return '';
     }
   };
+  const changeIntervalSlide = () => {
+    return setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % onboardingPageData.length);
+    }, onbordingAnimationTime * 1000);
+  };
 
   const clickLeftButtonHandler = () => {
     clearInterval(intervalRef.current);
     setCurrentSlide((prevSlide) => prevSlide - 1);
+    const changeSlide = changeIntervalSlide();
+    intervalRef.current = changeSlide;
   };
 
   const clickRightButtonHandler = () => {
@@ -49,12 +56,12 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
     } else {
       setCurrentSlide((prevSlide) => prevSlide + 1);
     }
+    const changeSlide = changeIntervalSlide();
+    intervalRef.current = changeSlide;
   };
 
   useEffect(() => {
-    const changeSlide = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % onboardingPageData.length);
-    }, onbordingAnimationTime * 1000);
+    const changeSlide = changeIntervalSlide();
     intervalRef.current = changeSlide;
 
     return () => {
@@ -84,7 +91,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
   return (
     <section className={classNames(cls.onboard, {}, [className])}>
       <div
-        className={classNames(cls.container, {}, [changeSlide()])}
+        className={classNames(cls.container, {}, [changeSlideClassName()])}
         style={{ backgroundImage: onboardingPageData[currentSlide].image }}
       >
         <div className={classNames(cls.wrap, {}, [])}>

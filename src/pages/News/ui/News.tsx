@@ -4,12 +4,14 @@ import styles from './News.module.css';
 
 export const News = () => {
   return (
-    <main className={styles.news}>
+    <div className={styles.news}>
       <section className={styles.container}>
-        <Header name='Новости' />
-        <Card />
-        <Card />
+        <main>
+          <Header name='Новости' />
+          <Card />
+          <Card />
+        </main>
       </section>
-    </main>
+    </div>
   );
 };

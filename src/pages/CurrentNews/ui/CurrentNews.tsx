@@ -4,11 +4,13 @@ import { CurrentNewsBlock } from './CurrentNewsBlock';
 
 export const CurrentNews = () => {
   return (
-    <main className={styles.content}>
+    <div className={styles.content}>
       <section className={styles.container}>
-        <Header name='Новости' />
+        <main>
+          <Header name='Новости' />
+          <CurrentNewsBlock />
+        </main>
       </section>
-      <CurrentNewsBlock />
-    </main>
+    </div>
   );
 };

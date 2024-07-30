@@ -6,8 +6,8 @@ export const News = () => {
   return (
     <div className={styles.news}>
       <section className={styles.container}>
+      <Header name='Новости' />
         <main>
-          <Header name='Новости' />
           <Card />
           <Card />
         </main>

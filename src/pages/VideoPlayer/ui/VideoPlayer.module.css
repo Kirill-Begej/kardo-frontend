@@ -1,0 +1,114 @@
+.video {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  color: #F1F1F1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.videoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member {
+  display: flex;
+  margin: 12px auto 0;
+  max-width: 390px;
+  padding-left: 18px;
+  width: 100%;
+}
+
+.avatar {
+  background-image: url('../../../shared/assets/images/vova.jpeg');
+  width: 45px;
+  height: 45px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 0 12px;
+}
+
+.name {
+  font-size: 16px;
+  font-family: var(--font-grtsk-tera-bold);
+  margin: 0;
+  line-height: normal;
+}
+
+.contest {
+  font-size: 14px;
+  font-family: var(--font-rubik-light);
+  line-height: normal;
+  margin: 0;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto 0;
+  max-width: 390px;
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 12px;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.block {
+  overflow: scroll hidden;
+  display: flex;
+  width: 350px; 
+  flex-wrap: nowrap;
+  gap: 12px;
+  margin: 12px auto 0;
+}
+
+.slide {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 100%;
+  gap: 8px;
+}
+
+.image {
+  background-image: url('../../../shared/assets/images/video.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
+  height: 110px;
+}
+
+.subitle {
+  font-family: var(--font-grtsk-tera-light);
+  font-size: 10px;
+  margin: 0 auto;
+}

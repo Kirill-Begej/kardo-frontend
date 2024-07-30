@@ -1,24 +1,24 @@
+import { Members } from 'pages/Members';
+import { VideoPlayer } from 'pages/VideoPlayer';
 import { RouteProps } from 'react-router-dom';
-import { MainPage } from 'pages/MainPage';
-import { TestPage } from 'pages/TestPage';
 
 export enum AppRoutes {
-  MAIN = 'main',
-  TEST = 'test',
+  MEMEBER = 'member',
+  PLAYER = 'video',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
-  [AppRoutes.TEST]: '/test',
+  [AppRoutes.MEMEBER]: '/members',
+  [AppRoutes.PLAYER]: '/video',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAIN]: {
-    path: RoutePath.main,
-    element: <MainPage />,
+  [AppRoutes.MEMEBER]: {
+    path: RoutePath.member,
+    element: <Members />,
   },
-  [AppRoutes.TEST]: {
-    path: RoutePath.test,
-    element: <TestPage />,
+  [AppRoutes.PLAYER]: {
+    path: RoutePath.video,
+    element: <VideoPlayer />,
   },
 };

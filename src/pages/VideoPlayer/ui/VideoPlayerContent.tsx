@@ -4,7 +4,7 @@ import styles from './VideoPlayer.module.css';
 export const VideoPlayerContent = () => {
   return (
         <main className={styles.content}>
-          <section className={styles.videoConteiner}>
+          <section className={styles.videoBlock}>
             <Video />
           </section>
           <section className={styles.member}>

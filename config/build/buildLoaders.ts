@@ -4,7 +4,7 @@ import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev, isProd }: BuildOptions): ModuleOptions['rules'] {
   const fileLoader = {
-    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    test: /\.(png|jpe?g|gif|woff2|woff|mp4)$/i,
     type: 'asset/resource',
   };
 

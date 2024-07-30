@@ -1,8 +1,5 @@
 .close {  
   cursor: pointer;
-  position: absolute;  
-  right: 4%;
-  top: 9.6%;
 }
 
 .closeIcon {

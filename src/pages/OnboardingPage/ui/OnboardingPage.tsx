@@ -1,6 +1,13 @@
-import { FC, useEffect, useState } from 'react';
+import {
+  FC,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
+import { onbordingAnimationTime } from 'app/variables/global';
+import { useNavigate } from 'react-router-dom';
 import cls from './OnboardingPage.module.css';
 import { onboardingPageData } from '../model/onboardingPageData';
 
@@ -9,6 +16,12 @@ interface OnboardingProps {
 }
 
 export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
+  const activeSlide = useRef(null);
+  const intervalRef = useRef(null);
+  const timeoutRef = useRef(null);
+  const buttonLeft = useRef(null);
+  const buttonRight = useRef(null);
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const changeSlide = () => {
@@ -24,13 +37,49 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
     }
   };
 
+  const clickLeftButtonHandler = () => {
+    clearInterval(intervalRef.current);
+    setCurrentSlide((prevSlide) => prevSlide - 1);
+  };
+
+  const clickRightButtonHandler = () => {
+    clearInterval(intervalRef.current);
+    if (currentSlide === onboardingPageData.length - 1) {
+      navigate('/auth');
+    } else {
+      setCurrentSlide((prevSlide) => prevSlide + 1);
+    }
+  };
+
   useEffect(() => {
     const changeSlide = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % onboardingPageData.length);
-    }, 7000);
+    }, onbordingAnimationTime * 1000);
+    intervalRef.current = changeSlide;
 
-    return () => clearInterval(changeSlide);
+    return () => {
+      clearInterval(changeSlide);
+      clearTimeout(timeoutRef.current);
+    };
   }, []);
+
+  useEffect(() => {
+    let lastSlide: ReturnType<typeof setTimeout>;
+    buttonLeft.current.disabled = false;
+    activeSlide.current.style.animationDuration = `${onbordingAnimationTime}s`;
+    if (currentSlide === 0) {
+      buttonLeft.current.disabled = true;
+    }
+    if (currentSlide === onboardingPageData.length - 1) {
+      clearInterval(intervalRef.current);
+      lastSlide = setTimeout(() => {
+        navigate('/auth');
+      }, onbordingAnimationTime * 1000);
+      timeoutRef.current = lastSlide;
+    }
+
+    return () => clearTimeout(lastSlide);
+  }, [currentSlide]);
 
   return (
     <section className={classNames(cls.onboard, {}, [className])}>
@@ -44,7 +93,11 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
             {onboardingPageData.map((_, i) => (
               <div
                 key={i}
-                className={classNames(cls.slide, {}, [i === currentSlide ? cls.active : ''])}
+                ref={i === currentSlide ? activeSlide : null}
+                className={classNames(cls.slide, {}, [
+                  i === currentSlide ? cls.active : '',
+                  i < currentSlide ? cls.noactive : '',
+                ])}
               ></div>
             ))}
           </div>
@@ -57,7 +110,21 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
             </p>
           </div>
         </div>
-        <CloseLink to='/' />
+        <CloseLink to='/auth' className={cls.closeLink}/>
+        <div className={classNames(cls.buttonContainer, {}, [cls.positionUp])}>
+          <button
+            type='button'
+            className={classNames(cls.button, {}, [])}
+            ref={buttonLeft}
+            onClick={clickLeftButtonHandler}
+          ></button>
+          <button
+            type='button'
+            className={classNames(cls.button, {}, [])}
+            ref={buttonRight}
+            onClick={clickRightButtonHandler}
+          ></button>
+        </div>
       </div>
     </section>
   );

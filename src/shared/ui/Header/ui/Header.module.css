@@ -1,0 +1,15 @@
+.header {
+  width: 100%;
+  background-color: #FF4310;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 16px;
+  font-family: var(--font-grtsk-tera-bold);
+  color: #F1F1F1;
+  padding-top: 50px;
+  line-height: 19px;
+}

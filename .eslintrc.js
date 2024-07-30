@@ -36,5 +36,6 @@ module.exports = {
     'import/no-extraneous-dependencies': [2, {
       devDependencies: true,
     }],
+    '@typescript-eslint/no-shadow': 0,
   },
 };

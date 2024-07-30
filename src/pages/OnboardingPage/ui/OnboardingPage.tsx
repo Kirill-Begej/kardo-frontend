@@ -1,14 +1,14 @@
 import { FC, useEffect, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
-import cls from './Onboarding.module.css';
+import cls from './OnboardingPage.module.css';
 import { OnboadringItems } from './OnboardingItems';
 
 interface OnboardingProps {
   className?: string;
 }
 
-export const Onboarding: FC = ({ className }: OnboardingProps) => {
+export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const changeSlide = () => {
@@ -62,3 +62,5 @@ export const Onboarding: FC = ({ className }: OnboardingProps) => {
     </section>
   );
 };
+
+export default OnboardingPage;

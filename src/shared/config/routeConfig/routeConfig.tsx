@@ -1,5 +1,5 @@
 import { RouteProps } from 'react-router-dom';
-import { Onboarding } from '../../../pages/Onboarding/index';
+import { OnboardingPage } from 'pages/OnboardingPage';
 
 export enum AppRoutes {
   ONBOARDING = 'main',
@@ -12,6 +12,6 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.ONBOARDING]: {
     path: RoutePath.main,
-    element: <Onboarding />,
+    element: <OnboardingPage />,
   },
 };

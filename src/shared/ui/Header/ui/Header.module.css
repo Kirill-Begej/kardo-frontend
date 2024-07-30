@@ -9,6 +9,7 @@
   text-align: center;
   background-color: #0D0D0D;
   position: relative;
+  box-sizing: border-box;
 }
 
 .title {

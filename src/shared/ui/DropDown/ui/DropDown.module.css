@@ -13,6 +13,12 @@
   gap: 12px;
   align-items: center;
   max-width: 153px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.select.change {
+  background-color: #F1F1F1;
+  color: #000;
 }
 
 .arrow {
@@ -23,38 +29,8 @@
   background-size: cover;
 }
 
-.menu {
-  list-style: none;
-  width: 203px;
-  padding: 0;
-  margin: 4px 0 0;
-  background-color: #151515;
-  border-radius: 2px;
-  border: 1px solid #FF4310;
-  display: none;
-  opacity: 0;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.open {
-  display: flex;
-  opacity: 1;
-}
-
-.item {
-  max-width: 176px;
-  width: 100%;
-  margin-left: 8px;
+.value {
   font-family: var(--font-rubik-regular);
   font-size: 12px;
-  color: #F1F1F1;
-}
-
-.item:first-of-type {
-  margin-top: 10px;
-}
-
-.item:last-of-type {
-  margin-bottom: 10px;
+  margin: 0;
 }

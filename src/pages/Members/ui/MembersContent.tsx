@@ -1,25 +1,29 @@
 import { DropDown } from 'shared/ui/DropDown';
-import { useState } from 'react';
 import { VideoMember } from 'shared/ui/VideoMember';
 import styles from './Members.module.css';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 
-export const MembersContent = () => {
-  const [openModule, setOpenModule] = useState(false);
+interface MembersContentProps {
+  className?: string;
+}
 
-  const handleOpenModule = () => {
-    setOpenModule((prevState) => !prevState);
-  };
+export const MembersContent: FC<MembersContentProps> = ({ className }) => {
   return (
-    <main className={styles.content}>
-      <section className={styles.dropDown}>
-        <DropDown name='Направление' isOpen={openModule} onOpen={handleOpenModule} />
-        <DropDown name='Конкурс' isOpen={openModule} onOpen={handleOpenModule} />
+    <main className={classNames(styles.content, {}, [className])}>
+      <section className={classNames(styles.section, {}, [])}>
+        <article className={classNames(styles.mainContainer, {}, [])}>
+          <DropDown />
+          <DropDown />
+        </article>
       </section>
-      <section className={styles.mainContent}>
-        <VideoMember />
-        <VideoMember />
-        <VideoMember />
-        <VideoMember />
+      <section className={classNames(styles.section, {}, [])}>
+        <article className={classNames(styles.mainContent, {}, [])}>
+          <VideoMember to='/video' />
+          <VideoMember to='/video' />
+          <VideoMember to='/video' />
+          <VideoMember to='/video' />
+        </article>
       </section>
     </main>
   );

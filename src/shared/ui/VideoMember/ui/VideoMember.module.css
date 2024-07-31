@@ -1,5 +1,5 @@
 .video {
-  width: 100%;
+  width: calc(100% - 0px);
   display: flex;
   flex-direction: column;
   text-align: start;

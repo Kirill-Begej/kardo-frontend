@@ -1,12 +1,17 @@
-import { Header } from 'shared/ui/Header';
+import { HeaderMain } from 'shared/ui/HeaderMain';
 import styles from './Members.module.css';
 import { MembersContent } from './MembersContent';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 
-export const Members = () => {
+interface MembersProps {
+  className?: string;
+}
+export const Members: FC<MembersProps> = ({ className }) => {
   return (
-    <div className={styles.members}>
-      <section className={styles.container}>
-        <Header name='Участник' />
+    <div className={classNames(styles.members, {}, [className])}>
+      <section className={classNames(styles.container, {}, [])}>
+        <HeaderMain to='' name='Участник' />
         <MembersContent />
       </section>
     </div>

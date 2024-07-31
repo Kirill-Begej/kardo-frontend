@@ -1,9 +1,8 @@
 .video {
-  width: 390px;
+  width: 100%;
 }
 
-.image {
-  width: 100%;
+.videoBlock {
+  width: calc(100% - 0px);
   height: 216px;
-  background-image: url('../../../assets/images/video.png');
 }

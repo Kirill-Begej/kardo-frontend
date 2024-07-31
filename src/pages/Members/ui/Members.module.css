@@ -12,6 +12,16 @@
   align-items: center;
 }
 
+.mainContainer {
+  padding-top: 16px;
+  max-width: calc(100% - 40px);
+  display: flex;
+  gap: 11px;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .content {
   width: 100%;
   margin: 0 auto;
@@ -19,18 +29,13 @@
   flex-direction: column;
 }
 
-.dropDown {
-  max-width: 350px;
+.section {
   width: 100%;
-  display: flex;
-  margin: 16px auto 0;
-  gap: 11px;
-  justify-content: flex-start;
+  margin: 0 auto;
 }
 
 .mainContent {
-  max-width: 350px;
-  width: 100%;
+  width: calc(100% - 40px);
   gap: 20px;
   display: flex;
   margin: 16px auto 0;

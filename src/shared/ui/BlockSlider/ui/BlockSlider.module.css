@@ -1,0 +1,8 @@
+.block {
+  overflow: scroll hidden;
+  display: flex;
+  gap: 12px;
+  width: calc(100% - -20px);
+  flex-wrap: nowrap;
+  margin: 12px 0 0;
+}

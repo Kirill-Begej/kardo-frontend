@@ -2,12 +2,13 @@ import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { PlayIcon } from 'shared/ui/PlayIcon/PlayIcon';
 import styles from './MainPage.module.css';
+import { BlockSlider } from 'shared/ui/BlockSlider';
 
 export const MembersBlock = () => {
   return (
     <Section pixelPerfect={true}>
-      <Titles isLink={true} name='Участники' />
-      <div className={styles.block}>
+      <Titles link='/members' isLink={true} name='Участники' />
+      <BlockSlider>
         <div className={styles.player}>
           <div className={styles.video}>
             <PlayIcon />
@@ -32,7 +33,7 @@ export const MembersBlock = () => {
           </div>
           <p className={styles.subittle}>Дмитрий Пономаренко</p>
         </div>
-        </div>
+        </BlockSlider>
     </Section>
   );
 };

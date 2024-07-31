@@ -22,22 +22,14 @@
   line-height: normal;
   font-family: var(--font-grtsk-tera-bold);
   color: #F1F1F1;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   border-radius: 2px;
   border: 1px solid #FF4310;
   background: #151515;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.block {
-  overflow: scroll hidden;
-  display: flex;
-  gap: 12px;
-  width: 370px; 
-  flex-wrap: nowrap;
-  margin: 12px auto 0;
 }
 
 .slide {
@@ -130,7 +122,7 @@
 }
 
 .cardImage {
-  width: 350px;
+  width: calc(100% - 0px);
   height: 85px;
   object-fit: cover;
   object-position: center;

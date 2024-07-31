@@ -10,7 +10,7 @@
   overflow: scroll hidden;
   display: flex;
   gap: 12px;
-  width: 390px; 
+  width: calc(100% - 0px); 
   flex-wrap: nowrap;
   scroll-behavior: smooth;
 }

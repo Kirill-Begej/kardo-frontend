@@ -1,6 +1,6 @@
 .titles {
   display: flex;
-  max-width: 350px;
+  width: calc(100% - 0px);
   justify-content: space-between;
   align-items: center;
 }
@@ -21,4 +21,6 @@
   margin: 0;
   max-width: 108px;
   width: 100%;
+  text-decoration: none;
+  color: #F1F1F1;
 }

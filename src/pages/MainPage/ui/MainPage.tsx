@@ -7,6 +7,8 @@
 import { Slider } from 'shared/ui/Slider/ui/Slider';
 
 import { Header } from 'shared/ui/Header';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 import styles from './MainPage.module.css';
 import { NewsBlock } from './NewsBlock';
 import { DirectionBlock } from './DirectionBlock';
@@ -14,13 +16,17 @@ import { MembersBlock } from './MembersBlock';
 import { ImageBlock } from './ImageBlock';
 import { BroadCast } from './BroadCast';
 
-const MainPage = () => {
+interface MainPageProps {
+  className?: string;
+}
+
+const MainPage: FC<MainPageProps> = ({ className }) => {
   return (
-    <section className={styles.main}>
-      <article className={styles.container}>
+    <section className={classNames(styles.main, {}, [className])}>
+      <article className={classNames(styles.container, {}, [])}>
         <Header />
-        <main className={styles.content}>
-          <button className={styles.button}>Подать заявку</button>
+        <main className={classNames(styles.content, {}, [])}>
+          <button className={classNames(styles.button, {}, [])}>Подать заявку</button>
           <Slider />
           <NewsBlock />
           <DirectionBlock />

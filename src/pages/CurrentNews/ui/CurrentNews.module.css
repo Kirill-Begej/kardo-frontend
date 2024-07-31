@@ -63,10 +63,9 @@
 .list {
   padding: 0;
   list-style: none;
-  width: 100%;
+  width: calc(100% - 0px);
   color: #FFF;
   margin: 12px auto 0;
-  max-width: 350px;
 }
 
 .text {

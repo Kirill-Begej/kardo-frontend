@@ -1,11 +1,16 @@
+.news {
+  width: 100%;
+  margin: 0;
+}
+
 .content {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   color: #F1F1F1;
   display: flex;
   flex-direction: column;
@@ -13,12 +18,21 @@
 }
 
 .mainContent {
-  max-width: 350px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+}
+
+.mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
+
+.info {
+  width: calc(100% - 0px);
 }
 
 .heading {
@@ -26,12 +40,11 @@
   font-family: var(--font-grtsk-tera-bold);
   color: #DFDFDF;
   margin: 28px auto 0;
-  max-width: 350px;
   width: 100%;
 }
 
 .image {
-  width: 350px;
+  width: calc(100% - 0px);
   height: 130px;
   object-fit: cover;
   object-position: center;
@@ -40,7 +53,6 @@
 }
 
 .mainText {
-  max-width: 350px;
   font-size: 14px;
   font-family: var(--font-rubik-regular);
   margin: 16px auto 0;
@@ -51,9 +63,10 @@
 .list {
   padding: 0;
   list-style: none;
-  max-width: 350px;
+  width: 100%;
   color: #FFF;
-  margin-top: 12px;
+  margin: 12px auto 0;
+  max-width: 350px;
 }
 
 .text {

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 import styles from './Card.module.css';
 import LinkIcon from '../../../assets/images/icons/Arrow_kardo_orange.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
 import image from '../../../assets/images/dance.png';
-import { FC } from 'react';
 
 interface CardProps {
   className?: string;

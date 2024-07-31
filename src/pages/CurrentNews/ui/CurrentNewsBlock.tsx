@@ -1,10 +1,17 @@
 import styles from './CurrentNews.module.css';
 import danceImage from '../../../shared/assets/images/dance.png';
+import { FC } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
 
-export const CurrentNewsBlock = () => {
+interface CurrentNewsBlockProps {
+  className?: string;
+}
+
+export const CurrentNewsBlock: FC<CurrentNewsBlockProps> = ({ className }) => {
   return (
-    <section className={styles.mainContent}>
-      <h2 className={styles.heading}>Национальный этап: Коста-Рика</h2>
+    <section className={classNames(styles.mainContent, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [className])}>
+        <h2 className={styles.heading}>Национальный этап: Коста-Рика</h2>
         <img className={styles.image} src={danceImage} />
         <div className={styles.info}>
           <p className={styles.mainText}>
@@ -31,6 +38,7 @@ export const CurrentNewsBlock = () => {
             в Ставрополе делегацию из Коста-Рики
           </p>
         </div>
-      </section>
+      </article>
+    </section>
   );
 };

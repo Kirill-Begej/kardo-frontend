@@ -1,5 +1,5 @@
 .card {
-  max-width: 350px;
+  width: calc(100% - 0px);
   display: flex;
   padding: 20px 12px 12px;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .cardImage {
-  width: 322px;
+  width: calc(100% - 0px);
   height: 121px;
   object-fit: cover;
   object-position: center;

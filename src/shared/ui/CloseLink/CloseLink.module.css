@@ -1,0 +1,10 @@
+.close {  
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: block;
+  height: 24px;
+  stroke: var(--secondary-font-color);
+  width: 24px;
+}

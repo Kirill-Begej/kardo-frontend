@@ -1,24 +1,17 @@
 import { RouteProps } from 'react-router-dom';
-import { MainPage } from 'pages/MainPage';
-import { TestPage } from 'pages/TestPage';
+import { OnboardingPage } from 'pages/OnboardingPage';
 
 export enum AppRoutes {
-  MAIN = 'main',
-  TEST = 'test',
+  ONBOARDING = 'main',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]: '/',
-  [AppRoutes.TEST]: '/test',
+  [AppRoutes.ONBOARDING]: '/',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.MAIN]: {
+  [AppRoutes.ONBOARDING]: {
     path: RoutePath.main,
-    element: <MainPage />,
-  },
-  [AppRoutes.TEST]: {
-    path: RoutePath.test,
-    element: <TestPage />,
+    element: <OnboardingPage />,
   },
 };

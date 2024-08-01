@@ -7,10 +7,6 @@ const App = () => {
     <div className={classNames('app', {}, [])}>
       <div className={classNames('wrapper', {}, [])}>
         <AppRouter />
-        <div className={classNames('test', {}, [])}>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-           Sunt, perspiciatis ab voluptatum fugiat reiciendis velit eos
-           rem aliquid odit nobis fuga perferendis corporis autem
-           impedit quos ea enim et adipisci!</div>
       </div>
     </div>
   );

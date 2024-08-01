@@ -36,5 +36,6 @@ module.exports = {
     'import/no-extraneous-dependencies': [2, {
       devDependencies: true,
     }],
+    'react/display-name': 0,
   },
 };

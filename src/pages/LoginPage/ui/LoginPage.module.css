@@ -1,6 +1,40 @@
+.login {
+  align-items: center;
+  background-color: var(--navbar-bg-color);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+  margin: 20px 0;
+  max-width: 856px;
+  width: 89.745%;
+}
+
 .error {
   color: red;
-  opacity: .7;
-  font-size: 12px;
   font-family: var(--font-rubik-light);
+  font-size: 12px;
+  opacity: .7;
+}
+
+.close {
+  position: absolute;
+  right: 5.2%;
+  top: 7%;
+}
+
+.closeText {
+  color: #A3A3A3;
+  font-family: var(--font-rubik-medium);
+  font-size: 14px;
+  text-decoration: none;
 }

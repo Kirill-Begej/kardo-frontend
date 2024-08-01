@@ -1,7 +1,7 @@
 import { Input } from 'shared/ui/Input/Input';
 import { ButtonAuth } from 'shared/ui/ButtonAuth/ButtonAuth';
 import { useFormValid, validation } from 'widgets/Validation/Validation';
-import { Form } from 'shared/ui/Form';
+import { Form } from 'widgets/Form';
 import cls from './RegisterPage.module.css';
 
 const RegisterPage = () => {

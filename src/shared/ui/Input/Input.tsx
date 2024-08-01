@@ -1,31 +1,49 @@
-import { ChangeEvent, FC } from 'react';
-import EyeIcon from 'shared/assets/images/icons/icon_eye.svg';
-import styles from './Input.module.css';
+import { ChangeEvent, FC, forwardRef } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import HideIcon from 'shared/assets/images/icons/hide_icon.svg';
+import ShowIcon from 'shared/assets/images/icons//show_icon.svg';
+import cls from './Input.module.css';
 
 interface InputProps {
-  name?: string;
-  id?: string;
+  className?: string;
+  type: 'text' | 'password' | 'email';
+  placeholder: string;
+  onChange: (evt: ChangeEvent<HTMLInputElement>) => void;
   value: string;
-  onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
-  placeholder?: string;
-  type?: 'text' | 'password' | 'email';
-  isPassword: boolean;
+  name: string;
+  error: boolean;
+  errorText: string;
+  ref?: any,
+  onIconClick?: () => void;
+  icon?: string;
 }
-export const Input: FC<InputProps> = ({
-  placeholder, type, isPassword, name, id, onChange, value,
-}) => {
+
+export const Input: FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(({
+  className,
+  type,
+  placeholder,
+  onChange,
+  value,
+  name,
+  error,
+  errorText,
+  onIconClick,
+  icon,
+}, ref) => {
   return (
-    <label className={styles.label}>
+    <label className={classNames(cls.label, {}, [className])}>
       <input
-        className={styles.input}
+        className={classNames(cls.input, { [cls.errorInput]: error }, [])}
         type={type}
         placeholder={placeholder}
-        name={name}
-        id={id}
         onChange={onChange}
         value={value}
-        required />
-      {isPassword ? <EyeIcon className={styles.icon} /> : null}
+        name={name}
+        ref={ref}
+      />
+      {error && <span className={classNames(cls.errorText, {}, [])}>{errorText}</span>}
+      {name === 'password' && value && icon === 'HideIcon' && <HideIcon className={classNames(cls.icon, {}, [])} onClick={onIconClick} />}
+      {name === 'password' && value && icon === 'ShowIcon' && <ShowIcon className={classNames(cls.icon, {}, [])} onClick={onIconClick} />}
     </label>
   );
-};
+});

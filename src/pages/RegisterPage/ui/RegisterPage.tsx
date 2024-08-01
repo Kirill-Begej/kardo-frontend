@@ -1,10 +1,10 @@
 import { Input } from 'shared/ui/Input/Input';
 import { ButtonAuth } from 'shared/ui/ButtonAuth/ButtonAuth';
 import { useFormValid, validation } from 'widgets/Validation/Validation';
-import { Form } from '../../../shared/ui/Form';
-import styles from './Register.module.css';
+import { Form } from 'shared/ui/Form';
+import cls from './RegisterPage.module.css';
 
-export const Register = () => {
+const RegisterPage = () => {
   const {
     value,
     error,
@@ -28,7 +28,7 @@ export const Register = () => {
         isPassword={false}
         placeholder='Имя' />
         {error.name && (
-        <p className={styles.error}>{error.name}</p>
+        <p className={cls.error}>{error.name}</p>
         )}
       <Input
         id='email'
@@ -39,7 +39,7 @@ export const Register = () => {
         isPassword={false}
         placeholder='E-mail' />
         {error.email && (
-        <p className={styles.error}>{error.email}</p>
+        <p className={cls.error}>{error.email}</p>
         )}
       <Input
         name='password'
@@ -50,9 +50,11 @@ export const Register = () => {
         isPassword={true}
         placeholder='Пароль' />
         {error.password && (
-        <p className={styles.error}>{error.password}</p>
+        <p className={cls.error}>{error.password}</p>
         )}
       <ButtonAuth isValid={isValid} name='Зарегистрироваться' />
     </Form>
   );
 };
+
+export default RegisterPage;

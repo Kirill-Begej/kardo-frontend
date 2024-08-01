@@ -1,10 +1,10 @@
 import { Input } from 'shared/ui/Input/Input';
 import { ButtonAuth } from 'shared/ui/ButtonAuth/ButtonAuth';
 import { useFormValid, validation } from 'widgets/Validation/Validation';
-import { Form } from '../../../shared/ui/Form';
-import styles from './Login.module.css';
+import { Form } from 'shared/ui/Form';
+import cls from './LoginPage.module.css';
 
-export const Login = () => {
+const LoginPage = () => {
   const {
     handleChange,
     value,
@@ -29,7 +29,7 @@ export const Login = () => {
         placeholder='E-mail'
       />
       {error.email && (
-        <p className={styles.error}>{error.email}</p>
+        <p className={cls.error}>{error.email}</p>
       )}
       <Input
         id='password'
@@ -41,9 +41,11 @@ export const Login = () => {
         placeholder='Пароль'
       />
       {error.password && (
-        <p className={styles.error}>{error.password}</p>
+        <p className={cls.error}>{error.password}</p>
       )}
       <ButtonAuth isValid={isValid} name='Войти в аккаунт' />
     </Form>
   );
 };
+
+export default LoginPage;

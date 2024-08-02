@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import styles from './NavBar.module.css';
 import { useState, useEffect, useRef } from 'react';
+import styles from './NavBar.module.css';
 import { NavBarProps, position } from './NavBarItems';
 
 export const NavBar = () => {
@@ -39,5 +39,5 @@ export const NavBar = () => {
         <p className={styles.text}>{activeText}</p>
       </div>
     </div>
-  )
-}
+  );
+};

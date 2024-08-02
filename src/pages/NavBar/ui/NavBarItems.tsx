@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 import HomeIcon from 'shared/assets/images/icons/NavBarIcons/House.svg';
 import HomeIconActive from 'shared/assets/images/icons/NavBarIcons/House_active.svg';
@@ -22,45 +22,62 @@ interface NavBarItem {
 }
 
 export const NavBarProps: NavBarItem[] = [
-  { 
-    id: 1, 
-    to: '/nav', 
-    icon: <HomeIcon className={styles.icon} />, 
-    activeIcon: <HomeIconActive className={styles.icon} />, 
-    text: 'Главная' 
+  {
+    id: 1,
+    to: '/nav',
+    icon: <HomeIcon className={styles.icon} />,
+    activeIcon: <HomeIconActive className={styles.icon} />,
+    text: 'Главная',
   },
-  { id: 2, 
-    to: '/nav', 
-    icon: <TrophyIcon className={styles.icon} />, 
-    activeIcon: <TrophyIconActive className={styles.icon} />, 
-    text: 'Конкурсы' 
+  {
+    id: 2,
+    to: '/nav',
+    icon: <TrophyIcon className={styles.icon} />,
+    activeIcon: <TrophyIconActive className={styles.icon} />,
+    text: 'Конкурсы',
   },
-  { 
-    id: 3, 
-    to: '/nav', 
-    icon: <GlobeIcon className={styles.icon} />, 
+  {
+    id: 3,
+    to: '/nav',
+    icon: <GlobeIcon className={styles.icon} />,
     activeIcon: <GlobeIconActive className={styles.icon} />,
-    text: 'Комьюнити' 
+    text: 'Комьюнити',
   },
-  { id: 4, 
-    to: '/nav', 
-    icon: <StickerIcon className={styles.icon} />, 
-    activeIcon: <StickerIconActive className={styles.icon} />, 
-    text: 'О проекте' 
+  {
+    id: 4,
+    to: '/nav',
+    icon: <StickerIcon className={styles.icon} />,
+    activeIcon: <StickerIconActive className={styles.icon} />,
+    text: 'О проекте',
   },
-  { 
-    id: 5, 
-    to: '/nav', 
-    icon: <UserIcon className={styles.icon} />, 
-    activeIcon: <UserIconActive className={styles.icon} />, 
-    text: 'Профиль' 
+  {
+    id: 5,
+    to: '/nav',
+    icon: <UserIcon className={styles.icon} />,
+    activeIcon: <UserIconActive className={styles.icon} />,
+    text: 'Профиль',
   },
-]
+];
 
 export const position = [
-  { bottom: '10px', left: '22px' },
-  { bottom: '10px', left: '85px' },
-  { bottom: '10px', left: '150px' },
-  { bottom: '10px', left: '220px' },
-  { bottom: '10px', left: '290px' }
+  {
+    bottom: '10px',
+    left: '22px',
+  },
+  {
+    bottom: '10px',
+    left: '85px',
+  },
+  {
+    bottom: '10px',
+    left: '150px',
+  },
+  {
+    bottom: '10px',
+    left: '220px',
+  },
+  {
+    bottom: '10px',
+    left: '290px',
+  },
 ];

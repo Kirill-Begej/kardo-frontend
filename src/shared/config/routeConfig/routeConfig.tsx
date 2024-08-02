@@ -19,6 +19,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   },
   [AppRoutes.NAVBAR]: {
     path: RoutePath.navbar,
-    element: <NavBar />
-  }
+    element: <NavBar />,
+  },
 };

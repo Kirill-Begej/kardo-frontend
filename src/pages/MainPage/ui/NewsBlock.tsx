@@ -1,4 +1,3 @@
-import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -11,7 +10,8 @@ interface NewsBlockProps {
 
 export const NewsBlock: FC<NewsBlockProps> = ({ className }) => {
   return (
-    <Section pixelPerfect={false}>
+    <section className={classNames(styles.section, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/news' isLink={true} name='Новости' />
         <BlockSlider>
           <div className={classNames(styles.slide, {}, [className])}>
@@ -55,6 +55,7 @@ export const NewsBlock: FC<NewsBlockProps> = ({ className }) => {
             </div>
           </div>
         </BlockSlider>
-    </Section>
+        </article>
+    </section>
   );
 };

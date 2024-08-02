@@ -4,6 +4,18 @@
   background-color: #151515;
 }
 
+.section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-top: 25px;
+  color: #F1F1F1;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;

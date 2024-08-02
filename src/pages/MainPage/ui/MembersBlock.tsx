@@ -1,4 +1,3 @@
-import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { PlayIcon } from 'shared/ui/PlayIcon/PlayIcon';
 import { BlockSlider } from 'shared/ui/BlockSlider';
@@ -12,7 +11,8 @@ interface MembersBlockProps {
 
 export const MembersBlock: FC<MembersBlockProps> = ({ className }) => {
   return (
-    <Section pixelPerfect={true}>
+    <section className={classNames(styles.section, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/members' isLink={true} name='Участники' />
       <BlockSlider>
         <div className={classNames(styles.player, {}, [className])}>
@@ -40,6 +40,7 @@ export const MembersBlock: FC<MembersBlockProps> = ({ className }) => {
           <p className={classNames(styles.subtitle, {}, [])}>Дмитрий Пономаренко</p>
         </div>
         </BlockSlider>
-    </Section>
+        </article>
+    </section>
   );
 };

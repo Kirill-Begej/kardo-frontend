@@ -1,4 +1,3 @@
-import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -12,7 +11,8 @@ interface DirectionBlockProps {
 
 export const DirectionBlock: FC<DirectionBlockProps> = ({ className }) => {
   return (
-    <Section pixelPerfect={false}>
+    <section className={classNames(styles.section, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/direction' isLink={true} name='Направления' />
       <BlockSlider>
         <div className={classNames(styles.direction, {}, [className])}>
@@ -36,6 +36,7 @@ export const DirectionBlock: FC<DirectionBlockProps> = ({ className }) => {
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>
       </BlockSlider>
-    </Section>
+      </article>
+    </section>
   );
 };

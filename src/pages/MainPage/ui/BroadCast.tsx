@@ -1,5 +1,4 @@
 import { PlayIcon } from 'shared/ui/PlayIcon/PlayIcon';
-import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -12,7 +11,8 @@ interface BroadCastProps {
 
 export const BroadCast: FC<BroadCastProps> = ({ className }) => {
   return (
-    <Section pixelPerfect={false}>
+    <section className={classNames(styles.section, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [className])}>
       <Titles link='/live' isLink={true} name='Трансляции' />
       <BlockSlider>
         <div className={classNames(styles.player, {}, [className])}>
@@ -22,6 +22,7 @@ export const BroadCast: FC<BroadCastProps> = ({ className }) => {
           <p className={classNames(styles.subtitle, {}, [])}>Дмитрий Пономаренко</p>
         </div>
       </BlockSlider>
-    </Section>
+      </article>
+    </section>
   );
 };

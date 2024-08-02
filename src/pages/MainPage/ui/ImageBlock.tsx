@@ -1,4 +1,3 @@
-import { Section } from 'shared/ui/Section/Section';
 import { Titles } from 'shared/ui/Titles/Title';
 import { FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -14,11 +13,13 @@ interface ImageBlockProps {
 
 export const ImageBlock: FC<ImageBlockProps> = ({ isImage, name, className }) => {
   return (
-    <Section pixelPerfect={true}>
+    <section className={classNames(styles.section, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/' isLink={false} name={name} />
       <img
         className={classNames(styles.cardImage, {}, [className])}
         src={isImage ? imageWaiting : imageCard} />
-    </Section>
+      </article>
+    </section>
   );
 };

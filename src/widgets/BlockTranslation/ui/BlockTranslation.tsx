@@ -3,13 +3,13 @@ import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './MainPage.module.css';
+import styles from './BlockTranslation.module.css';
 
-interface BroadCastProps {
+interface BlockTranslationProps {
   className?: string;
 }
 
-export const BroadCast: FC<BroadCastProps> = ({ className }) => {
+export const BlockTranslation: FC<BlockTranslationProps> = ({ className }) => {
   return (
     <section className={classNames(styles.section, {}, [className])}>
       <article className={classNames(styles.mainContainer, {}, [className])}>

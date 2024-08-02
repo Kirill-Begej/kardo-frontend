@@ -15,6 +15,10 @@
   scroll-behavior: smooth;
 }
 
+.block::-webkit-scrollbar {
+  display: none;
+}
+
 .slide {
   background-image: url('../../../assets/images/slide.jpg');
   flex: 0 0 350px;

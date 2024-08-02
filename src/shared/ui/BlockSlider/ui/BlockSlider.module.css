@@ -6,3 +6,7 @@
   flex-wrap: nowrap;
   margin: 12px 0 0;
 }
+
+.block::-webkit-scrollbar {
+  display: none;
+}

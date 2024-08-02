@@ -1,0 +1,33 @@
+.section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-top: 25px;
+  color: #F1F1F1;
+}
+
+.direction {
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subtitle {
+  font-family: var(--font-grtsk-tera-light);
+  font-size: 12px;
+  line-height: 15px;
+  max-width: 200px;
+  margin: 8px 0 0;
+}

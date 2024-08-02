@@ -3,13 +3,13 @@ import { PlayIcon } from 'shared/ui/PlayIcon/PlayIcon';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './MainPage.module.css';
+import styles from './BlockMembers.module.css';
 
-interface MembersBlockProps {
+interface BlockMembersProps {
   className?: string;
 }
 
-export const MembersBlock: FC<MembersBlockProps> = ({ className }) => {
+export const BlockMembers: FC<BlockMembersProps> = ({ className }) => {
   return (
     <section className={classNames(styles.section, {}, [className])}>
       <article className={classNames(styles.mainContainer, {}, [])}>

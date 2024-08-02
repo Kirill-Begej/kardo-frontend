@@ -4,18 +4,6 @@
   background-color: #151515;
 }
 
-.section {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.mainContainer {
-  max-width: calc(100% - 40px);
-  margin: 0 auto;
-  padding-top: 25px;
-  color: #F1F1F1;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -34,110 +22,12 @@
   line-height: normal;
   font-family: var(--font-grtsk-tera-bold);
   color: #F1F1F1;
-  max-width: 350px;
   width: 100%;
+  width: 89.004%;
   border-radius: 2px;
   border: 1px solid #FF4310;
   background: #151515;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.slide {
-  flex: 0 0 200px;
-  height: 130px;
-  background-image: url('../../../shared/assets/images/slide.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: relative;
-  margin: 0;
-}
-
-.textSubtitle {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  background: rgb(0 0 0 / 70%);
-  padding: 4px 8px;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-
-.date {
-  border-radius: 2px;
-  background: rgb(0 0 0 / 50%);
-  display: flex;
-  padding: 4px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 40px;
-  right: 4px;
-}
-
-.day {
-  font-size: 10px;
-  font-family: var(--font-grtsk-tera-light);
-  margin: 0;
-}
-
-.name {
-  max-width: 190px;
-  width: 100%;
-  font-size: 10px;
-  font-family: var(--font-grtsk-tera-light);
-  margin: 0;
-}
-
-.direction {
-  max-width: 120px;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-}
-
-.player {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-}
-
-.video {
-  width: 200px;
-  height: 110px;
-  border-radius: 4px;
-  background: linear-gradient(0deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 40%) 100%), url('../../../shared/assets/images/videoImage.png') lightgray 50% / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.subtitle {
-  font-family: var(--font-grtsk-tera-light);
-  font-size: 12px;
-  line-height: 15px;
-  max-width: 200px;
-  margin: 8px 0 0;
-}
-
-.cardImage {
-  width: calc(100% - 0px);
-  height: 85px;
-  object-fit: cover;
-  object-position: center;
-  margin-top: 12px;
-  border-radius: 4px;
 }

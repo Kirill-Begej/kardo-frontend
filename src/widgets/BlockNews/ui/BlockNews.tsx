@@ -2,13 +2,13 @@ import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './MainPage.module.css';
+import styles from './BlockNews.module.css';
 
-interface NewsBlockProps {
+interface BlockNewsProps {
   className?: string
 }
 
-export const NewsBlock: FC<NewsBlockProps> = ({ className }) => {
+export const BlockNews: FC<BlockNewsProps> = ({ className }) => {
   return (
     <section className={classNames(styles.section, {}, [className])}>
       <article className={classNames(styles.mainContainer, {}, [])}>

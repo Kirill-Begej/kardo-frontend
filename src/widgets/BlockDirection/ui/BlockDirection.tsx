@@ -2,14 +2,14 @@ import { Titles } from 'shared/ui/Titles/Title';
 import { BlockSlider } from 'shared/ui/BlockSlider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './MainPage.module.css';
+import styles from './BlockDirection.module.css';
 import image from '../../../shared/assets/images/slide.jpg';
 
-interface DirectionBlockProps {
+interface BlockDirectionProps {
   className?: string;
 }
 
-export const DirectionBlock: FC<DirectionBlockProps> = ({ className }) => {
+export const BlockDirection: FC<BlockDirectionProps> = ({ className }) => {
   return (
     <section className={classNames(styles.section, {}, [className])}>
       <article className={classNames(styles.mainContainer, {}, [])}>

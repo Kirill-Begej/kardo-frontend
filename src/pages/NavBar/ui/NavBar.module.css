@@ -1,0 +1,45 @@
+.navbar {
+  max-width: 340px;
+  margin: 100px auto;
+  background-color: #000;
+  padding: 18px 27px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.nav {
+  display: flex;
+  gap: 44px;
+}
+
+.paragraph {
+  position: absolute;
+  transition: left .3s ease, bottom .3s ease;
+}
+
+.text {
+  font-family: var(--font-rubik-regular);
+  font-size: 10px;
+  opacity: 1;
+  color: #FF4310;
+}
+
+.fade {
+  transition: opacity .3s ease;
+}
+
+.link {
+  text-decoration: none;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.link.active {
+  transform: translateY(-6px);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}

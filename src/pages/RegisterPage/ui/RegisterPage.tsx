@@ -1,59 +1,42 @@
-import { Input } from 'shared/ui/Input/Input';
-import { ButtonAuth } from 'shared/ui/ButtonAuth/ButtonAuth';
-import { useFormValid, validation } from 'widgets/Validation/Validation';
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { classNames } from 'shared/lib/classNames/classNames';
+import MainIcon from 'shared/ui/MainIcon/MainIcon';
 import { Form } from 'widgets/Form';
+import { AuthButton } from 'shared/ui/AuthButton/AuthButton';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import cls from './RegisterPage.module.css';
 
-const RegisterPage = () => {
-  const {
-    value,
-    error,
-    handleChange,
-    isValid,
-  } = useFormValid(validation, 'register');
+interface RegisterPageProps {
+  className?: string;
+}
+
+const RegisterPage: FC = ({ className }: RegisterPageProps) => {
   return (
-    <Form
-      auth='Уже есть аккаунт?'
-      link='Войти'
-      to='/'
-      isLogin={false}
-      isRegister={true}
-    >
-      <Input
-        name='name'
-        id='name'
-        value={value.name || ''}
-        onChange={handleChange}
-        type='text'
-        isPassword={false}
-        placeholder='Имя' />
-        {error.name && (
-        <p className={cls.error}>{error.name}</p>
-        )}
-      <Input
-        id='email'
-        name='email'
-        value={value.email || ''}
-        onChange={handleChange}
-        type='email'
-        isPassword={false}
-        placeholder='E-mail' />
-        {error.email && (
-        <p className={cls.error}>{error.email}</p>
-        )}
-      <Input
-        name='password'
-        id='password'
-        value={value.password || ''}
-        onChange={handleChange}
-        type='password'
-        isPassword={true}
-        placeholder='Пароль' />
-        {error.password && (
-        <p className={cls.error}>{error.password}</p>
-        )}
-      <ButtonAuth isValid={isValid} name='Зарегистрироваться' />
-    </Form>
+    <section className={classNames(cls.registerPage, {}, [className])}>
+      <div className={classNames(cls.container, {}, [])}>
+        <MainIcon className={classNames('', {}, [cls.mainIcon])} />
+        <Form className={classNames('', {}, [cls.registerForm])} textSendButton='Зарегистрироваться' />
+        <div className={classNames(cls.textRow, {}, [cls.textColumn])}>
+          <span className={classNames(cls.text, {}, [])}>Создавая аккаунт, Вы принимаете</span>
+          <Link to='#' className={cls.link}>Условия использования</Link>
+        </div>
+        <div className={classNames(cls.distinction, {}, [])}>
+          <span className={classNames(cls.line, {}, [])}></span>
+          <span>Или</span>
+          <span className={classNames(cls.line, {}, [])}></span>
+        </div>
+        <div className={classNames(cls.buttonRow, {}, [])}>
+          <AuthButton className={classNames('', {}, [cls.button])} type='Yandex' text='Яндекс'/>
+          <AuthButton className={classNames('', {}, [cls.button])} type='Vkontakte' text='Вконтакте'/>
+        </div>
+        <div className={classNames(cls.textRow, {}, [])}>
+          Уже есть аккаунт? <Link to={RoutePath.login} className={cls.link}>Войти</Link>
+        </div>
+      </div>
+      <CloseLink to='/' className={classNames(cls.close, {}, [cls.closeText])}>Пропустить</CloseLink>
+    </section>
   );
 };
 

@@ -1,50 +1,69 @@
-/*
-  нужно будет исправить в css цвета, брать из global.css, добавил шрифты,
-  + подправить под pixelPerfect + добавить валидацию и глазок для пароля
-*/
-
-import { FC, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import AuthIcon from 'shared/ui/AuthIcon/AuthIcon';
+import {
+  ChangeEvent,
+  createRef,
+  FC,
+  FormEvent,
+  useState,
+} from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useForm } from 'features/hooks/useForm';
+import { Input } from 'shared/ui/Input/Input';
+import { Button } from 'shared/ui/Button/Button';
 import cls from './Form.module.css';
 
 interface FormProps {
-  children: ReactNode;
-  auth: string;
-  link: string;
-  to: string;
-  isLogin: boolean;
-  isRegister: boolean;
+  className?: string;
+  textSendButton: string;
 }
 
-export const Form: FC<FormProps> = ({
-  children, auth, link, to, isLogin, isRegister,
-}) => {
+export const Form: FC<FormProps> = ({ className, textSendButton }) => {
+  const { values, handleChange } = useForm({});
+  const passwordRef = createRef<HTMLInputElement>();
+  const [passwordIcon, setPasswordIcon] = useState<'HideIcon' | 'ShowIcon'>('HideIcon');
+  const [passwordType, setPasswordType] = useState<'text' | 'password'>('password');
+
+  const onIconClick = () => {
+    if (passwordRef.current.type === 'password') {
+      setPasswordType('text');
+      setPasswordIcon('ShowIcon');
+      passwordRef.current.focus();
+    } else {
+      setPasswordType('password');
+      setPasswordIcon('HideIcon');
+      passwordRef.current.focus();
+    }
+  };
+
+  const onSubmitFormHandler = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className={`${cls.form} ${isLogin ? '' : cls.formRegister}`}>
-      {children}
-      {isRegister
-        ? <div className={cls.content}>
-          <p className={cls.condition}>Создавая аккаунт, Вы принимаете
-            <Link to={to} className={cls.conditionLink}>Условия использования</Link>
-          </p>
-        </div>
-        : null}
-      <p className={cls.subtitle}>Или</p>
-      <ul className={cls.list}>
-        <li className={cls.block}>
-          <AuthIcon isYandex={true} />
-          <p className={cls.text}>Яндекс</p>
-        </li>
-        <li className={cls.block}>
-          <AuthIcon isYandex={false} />
-          <p className={cls.text}>Вконтакте</p>
-        </li>
-      </ul>
-      <p className={cls.textLink}>{auth}
-        <Link to={to} className={cls.link}>{link}</Link>
-      </p>
-      {isLogin ? <Link className={cls.password} to='/'>Забыли пароль?</Link> : null}
+    <form className={classNames(cls.form, {}, [className])} onSubmit={onSubmitFormHandler}>
+      <div className={classNames(cls.container, {}, [])}>
+        <Input
+          type='text'
+          placeholder='E-mail'
+          onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+          value={values.email || ''}
+          name='email'
+          error={false}
+          errorText='Введите корректный e-mail'
+        />
+        <Input
+          type={passwordType}
+          placeholder='Пароль'
+          onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
+          value={values.password || ''}
+          name='password'
+          error={false}
+          errorText='Неверный пароль'
+          ref={passwordRef}
+          onIconClick={onIconClick}
+          icon={passwordIcon}
+        />
+      </div>
+      <Button type='submit' noActive={true}>{textSendButton}</Button>
     </form>
   );
 };

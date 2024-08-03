@@ -1,5 +1,5 @@
 .label {
-  height: 61px;
+  min-height: 61px;
   position: relative;
 }
 

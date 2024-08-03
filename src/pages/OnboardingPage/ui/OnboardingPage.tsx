@@ -4,18 +4,20 @@ import {
   useRef,
   useState,
 } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import { onbordingAnimationTime } from 'app/variables/global';
-import { useNavigate } from 'react-router-dom';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import CloseIcon from 'shared/assets/images/icons/close_icon.svg';
 import cls from './OnboardingPage.module.css';
 import { onboardingPageData } from '../model/onboardingPageData';
 
-interface OnboardingProps {
+interface OnboardingPageProps {
   className?: string;
 }
 
-export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
+export const OnboardingPage: FC = ({ className }: OnboardingPageProps) => {
   const activeSlide = useRef(null);
   const intervalRef = useRef(null);
   const timeoutRef = useRef(null);
@@ -80,7 +82,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
     if (currentSlide === onboardingPageData.length - 1) {
       clearInterval(intervalRef.current);
       lastSlide = setTimeout(() => {
-        navigate('/auth');
+        navigate(RoutePath.login);
       }, onbordingAnimationTime * 1000);
       timeoutRef.current = lastSlide;
     }
@@ -117,7 +119,9 @@ export const OnboardingPage: FC = ({ className }: OnboardingProps) => {
             </p>
           </div>
         </div>
-        <CloseLink to='/auth' className={cls.closeLink}/>
+        <CloseLink to={RoutePath.login} className={classNames(cls.closeLink, {}, [])}>
+          <CloseIcon className={classNames(cls.closeIcon, {}, [])} />
+        </CloseLink>
         <div className={classNames(cls.buttonContainer, {}, [cls.positionUp])}>
           <button
             type='button'

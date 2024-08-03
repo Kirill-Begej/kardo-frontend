@@ -55,7 +55,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingPageProps) => {
   const clickRightButtonHandler = () => {
     clearInterval(intervalRef.current);
     if (currentSlide === onboardingPageData.length - 1) {
-      navigate('/auth');
+      navigate(RoutePath.login);
     } else {
       setCurrentSlide((prevSlide) => prevSlide + 1);
     }

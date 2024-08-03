@@ -35,6 +35,7 @@ ___
 ___
 
 ## Ссылка на деплой приложения
+[Kardo-Project](https://kardo-dev.vercel.app/)
 ___
 
 ## Полезные ссылки

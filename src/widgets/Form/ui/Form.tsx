@@ -6,7 +6,7 @@ import {
   useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useForm } from 'features/hooks/useForm';
+import { useValidation } from 'features/hooks/useValidation';
 import { Input } from 'shared/ui/Input/Input';
 import { Button } from 'shared/ui/Button/Button';
 import cls from './Form.module.css';
@@ -17,7 +17,12 @@ interface FormProps {
 }
 
 export const Form: FC<FormProps> = ({ className, textSendButton }) => {
-  const { values, handleChange } = useForm({});
+  const {
+    values,
+    errors,
+    isValid,
+    handleChange,
+  } = useValidation({});
   const passwordRef = createRef<HTMLInputElement>();
   const [passwordIcon, setPasswordIcon] = useState<'HideIcon' | 'ShowIcon'>('HideIcon');
   const [passwordType, setPasswordType] = useState<'text' | 'password'>('password');
@@ -42,13 +47,13 @@ export const Form: FC<FormProps> = ({ className, textSendButton }) => {
     <form className={classNames(cls.form, {}, [className])} onSubmit={onSubmitFormHandler}>
       <div className={classNames(cls.container, {}, [])}>
         <Input
-          type='text'
+          type='email'
           placeholder='E-mail'
           onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
           value={values.email || ''}
           name='email'
-          error={false}
-          errorText='Введите корректный e-mail'
+          error={Object.prototype.hasOwnProperty.call(errors, 'email')}
+          errorText={errors.email || ''}
         />
         <Input
           type={passwordType}
@@ -56,14 +61,14 @@ export const Form: FC<FormProps> = ({ className, textSendButton }) => {
           onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)}
           value={values.password || ''}
           name='password'
-          error={false}
-          errorText='Неверный пароль'
+          error={Object.prototype.hasOwnProperty.call(errors, 'password')}
+          errorText={errors.password || ''}
           ref={passwordRef}
           onIconClick={onIconClick}
           icon={passwordIcon}
         />
       </div>
-      <Button type='submit' noActive={true}>{textSendButton}</Button>
+      <Button type='submit' active={isValid}>{textSendButton}</Button>
     </form>
   );
 };

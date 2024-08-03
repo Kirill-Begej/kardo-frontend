@@ -6,18 +6,18 @@ interface ButtonProps {
   className?: string;
   children: string;
   type: 'button' | 'reset' | 'submit';
-  noActive?: boolean;
+  active?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
   className,
   children,
   type,
-  noActive,
+  active,
 }) => {
   return (
     <button
-      className={classNames(cls.button, { [cls.noActive]: noActive }, [className])}
+      className={classNames(cls.button, { [cls.active]: active }, [className])}
       type={type}
     >{children}</button>
   );

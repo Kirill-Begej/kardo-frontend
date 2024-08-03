@@ -22,9 +22,11 @@
 
 .errorText {
   color: var(--error-color);
+  display: block;
   font-family: var(--font-rubik-regular);
   font-size: 12px;
   padding: 0 15px;
+  width: 100%;
 }
 
 .icon {

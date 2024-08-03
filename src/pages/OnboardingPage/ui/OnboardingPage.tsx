@@ -38,6 +38,7 @@ export const OnboardingPage: FC = ({ className }: OnboardingPageProps) => {
         return '';
     }
   };
+
   const changeIntervalSlide = () => {
     return setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % onboardingPageData.length);

@@ -125,6 +125,13 @@
   z-index: 15;
 }
 
+.closeIcon {
+  display: block;
+  height: 24px;
+  stroke: var(--secondary-font-color);
+  width: 24px;
+}
+
 .buttonContainer {
   inset: 0;
   position: absolute;

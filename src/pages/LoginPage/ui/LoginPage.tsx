@@ -35,7 +35,7 @@ const LoginPage: FC = ({ className }: LoginPageProps) => {
         </div>
         <Link to='#' className={cls.link}>Забыли пароль?</Link>
       </div>
-      <CloseLink to='/' className={classNames(cls.close, {}, [cls.closeText])}>Пропустить</CloseLink>
+      <CloseLink to='#' className={classNames(cls.close, {}, [cls.closeText])}>Пропустить</CloseLink>
     </section>
   );
 };

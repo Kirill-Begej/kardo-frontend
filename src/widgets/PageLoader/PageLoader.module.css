@@ -1,0 +1,7 @@
+.pageloader {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  min-height: 100vh;
+}

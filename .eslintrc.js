@@ -37,5 +37,7 @@ module.exports = {
       devDependencies: true,
     }],
     'react/display-name': 0,
+    '@typescript-eslint/no-shadow': 0,
+    'global-require': 0,
   },
 };

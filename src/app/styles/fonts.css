@@ -19,6 +19,33 @@
 }
 
 @font-face {
+    src: url('../../shared/assets/fonts/Rubik-Light.woff') format('woff'),
+         url('../../shared/assets/fonts/Rubik-Light.woff2') format('woff2');
+    font-family: 'Rubik-Light';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url('../../shared/assets/fonts/Rubik-Regular.woff') format('woff'),
+         url('../../shared/assets/fonts/Rubik-Regular.woff2') format('woff2');
+    font-family: 'Rubik-Regular';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src: url('../../shared/assets/fonts/Rubik-Medium.woff') format('woff'),
+         url('../../shared/assets/fonts/Rubik-Medium.woff2') format('woff2');
+    font-family: 'Rubik-Medium';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     src:
         url('../../shared/assets/fonts/Rubik-SemiBold.woff2') format('woff2'),
         url('../../shared/assets/fonts/Rubik-SemiBold.woff') format('woff');

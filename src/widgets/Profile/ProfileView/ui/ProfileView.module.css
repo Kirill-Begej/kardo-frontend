@@ -1,0 +1,52 @@
+.view {
+  width: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.link {
+  margin: 0;
+  display: flex;
+  padding: 11px 16px 0 11px;
+  gap: 16px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B1B1B;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 11px;
+  border-bottom: 1px solid gray;
+}
+
+.calendar {
+  border: none;
+}
+
+.linkText {
+  font-family: var(--font-rubik-light);
+  font-size: 16px;
+  line-height: 19px;
+  color: #F1F1F1;
+  margin: 0;
+}

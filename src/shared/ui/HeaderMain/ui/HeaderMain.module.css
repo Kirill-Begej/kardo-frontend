@@ -1,0 +1,33 @@
+.header {
+  margin: 0 auto;
+  padding-top: 58px;
+  width: 100%;
+  background-color: #0D0D0D;
+  position: relative;
+}
+
+.headerContainer {
+  background-color: #0D0D0D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: var(--font-grtsk-tera-light);
+  max-width: 80px;
+  width: 100%;
+  font-size: 14px;
+  line-height: normal;
+  margin: 0;
+  color: #F1F1F1;
+  padding-bottom: 9px;
+}
+
+.link {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}

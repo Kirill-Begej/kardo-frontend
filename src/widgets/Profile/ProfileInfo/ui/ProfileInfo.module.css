@@ -1,0 +1,52 @@
+.main {
+  width: 100%;
+  margin: 0;
+}
+
+.mainContent {
+  display: flex;
+  gap: 8px;
+  padding: 40px 20px;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../../shared/assets/images/Profile/background.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.69);
+}
+
+.avatar {
+  object-fit: cover;
+  object-position: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  color: #F1F1F1;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 16px;
+}
+
+.place {
+  margin: 0;
+  font-family: var(--font-rubik-regular);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.hobby {
+  margin: 0;
+  font-family: var(--font-rubik-regular);
+  font-size: 14px;
+  list-style: 18px;
+}

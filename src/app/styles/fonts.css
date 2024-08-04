@@ -19,6 +19,15 @@
 }
 
 @font-face {
+    src: url('../../shared/assets/fonts/Rubik-Light.woff') format('woff'),
+         url('../../shared/assets/fonts/Rubik-Light.woff2') format('woff2');
+    font-family: 'Rubik-Light';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     src: url('../../shared/assets/fonts/Rubik-Regular.woff') format('woff'),
          url('../../shared/assets/fonts/Rubik-Regular.woff2') format('woff2');
     font-family: 'Rubik-Regular';

@@ -1,11 +1,11 @@
 import { HeaderMain } from 'shared/ui/HeaderMain/ui/HeaderMain';
-import styles from './ProfilePage.module.css';
 import { ProfileHobby } from 'widgets/Profile/ProfileHobby';
 import { ProfileView } from 'widgets/Profile/ProfileView';
 import { ProfileContent } from 'widgets/Profile/ProfileContent';
 import { ProfileInfo } from 'widgets/Profile/ProfileInfo';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
+import styles from './ProfilePage.module.css';
 
 interface ProfileProrps {
   className?: string
@@ -24,7 +24,7 @@ const ProfilePage: FC<ProfileProrps> = ({ className }) => {
         </main>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProfilePage;

@@ -1,6 +1,6 @@
-import styles from './ProfileInfo.module.css';
 import avatar from 'shared/assets/images/Profile/avatar.jpeg';
 import { classNames } from 'shared/lib/classNames/classNames';
+import styles from './ProfileInfo.module.css';
 
 export const ProfileInfo = () => {
   return (
@@ -14,5 +14,5 @@ export const ProfileInfo = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

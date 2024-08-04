@@ -1,6 +1,6 @@
-import styles from './ProfileHobby.module.css';
 import PlusIcon from 'shared/assets/images/icons/Plus.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
+import styles from './ProfileHobby.module.css';
 
 export const ProfileHobby = () => {
   return (
@@ -31,5 +31,5 @@ export const ProfileHobby = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};

@@ -1,7 +1,7 @@
-import styles from './ProfileContent.module.css';
 import card from 'shared/assets/images/Profile/card.jpeg';
 import Plus from 'shared/assets/images/icons/Plus.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
+import styles from './ProfileContent.module.css';
 
 export const ProfileContent = () => {
   return (
@@ -47,4 +47,4 @@ export const ProfileContent = () => {
       </div>
     </section>
   );
-}
+};

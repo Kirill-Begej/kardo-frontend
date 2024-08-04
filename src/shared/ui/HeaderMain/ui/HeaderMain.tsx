@@ -19,7 +19,7 @@ export const HeaderMain: FC<HeaderProrps> = ({ name, className, to }) => {
         <Link to={to} className={classNames(styles.link, {}, [])}>
           <BackIcon className={classNames(styles.svg, {}, [])} />
         </Link>
-        
+
       </article>
     </header>
   );

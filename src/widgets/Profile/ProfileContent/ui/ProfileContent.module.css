@@ -83,13 +83,13 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 364px) {
+@media screen and (width <= 364px) {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (width <= 300px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -3,6 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { HeaderMain } from 'shared/ui/HeaderMain/ui/HeaderMain';
 import { AccountAvatar } from 'widgets/Account/AccountAvatar';
 import { Picker } from 'widgets/Account/Picker';
+import { Form } from 'widgets/Account/Form/Form';
 import styles from './AccountSettingsPage.module.css';
 
 interface AccountSettingsProrps {
@@ -17,6 +18,11 @@ const AccountSettingsPage: FC<AccountSettingsProrps> = ({ className }) => {
         <main className={classNames(styles.content, {}, [])}>
           <AccountAvatar />
           <Picker />
+          <section className={classNames(styles.section, {}, [])}>
+            <div className={classNames(styles.mainContainer, {}, [])}>
+              <Form />
+            </div>
+          </section>
         </main>
       </div>
     </div>

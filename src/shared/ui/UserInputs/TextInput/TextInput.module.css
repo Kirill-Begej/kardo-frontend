@@ -1,0 +1,27 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  text-align: start;
+  width: 100%;
+}
+
+.text {
+  margin: 0 0 0 16px;
+  font-size: 10px;
+  font-family: var(--font-rubik-regular);
+  color: #6D6D6D;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  padding: 11px 16px;
+  font-size: 16px;
+  border-radius: 2px;
+  background-color: #1B1B1B;
+  color: #F1F1F1;
+  font-family: var(--font-rubik-light);
+  border: none;
+}

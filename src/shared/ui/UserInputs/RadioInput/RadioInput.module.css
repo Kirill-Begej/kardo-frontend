@@ -1,0 +1,51 @@
+.radio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: start;
+}
+
+.text {
+  margin: 0 0 0 16px;
+  font-size: 10px;
+  font-family: var(--font-rubik-regular);
+  color: #6D6D6D;
+  text-transform: uppercase;
+}
+
+.block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  background-color: #1B1B1B;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px 16px;
+  margin: 0;
+}
+
+.radioText {
+  font-size: 16px;
+  font-family: var(--font-rubik-light);
+  margin: 0;
+  color: #F1F1F1;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioIcon {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0;
+  cursor: pointer;
+}

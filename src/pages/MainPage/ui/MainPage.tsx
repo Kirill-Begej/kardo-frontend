@@ -3,12 +3,12 @@ import { Slider } from 'shared/ui/Slider/ui/Slider';
 import { Header } from 'shared/ui/Header';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './MainPage.module.css';
 import { BlockNews } from 'widgets/BlockNews';
 import { BlockMembers } from 'widgets/BlockMembers';
 import { BlockImage } from 'widgets/ImageBlock';
 import { BlockTranslation } from 'widgets/BlockTranslation';
 import { BlockDirection } from 'widgets/BlockDirection';
+import styles from './MainPage.module.css';
 
 interface MainPageProps {
   className?: string;

@@ -15,23 +15,23 @@ export const BlockDirection: FC<BlockDirectionProps> = ({ className }) => {
       <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/direction' isLink={true} name='Направления' />
       <BlockSlider>
-        <div className={classNames(styles.direction, {}, [className])}>
+        <div className={classNames(styles.direction, {}, [])}>
           <img className={classNames(styles.image, {}, [])} src={image} />
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>
-        <div className={classNames(styles.direction, {}, [className])}>
+        <div className={classNames(styles.direction, {}, [])}>
           <img className={classNames(styles.image, {}, [])} src={image} />
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>
-        <div className={classNames(styles.direction, {}, [className])}>
+        <div className={classNames(styles.direction, {}, [])}>
           <img className={classNames(styles.image, {}, [])} src={image} />
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>
-        <div className={classNames(styles.direction, {}, [className])}>
+        <div className={classNames(styles.direction, {}, [])}>
           <img className={classNames(styles.image, {}, [])} src={image} />
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>
-        <div className={classNames(styles.direction, {}, [className])}>
+        <div className={classNames(styles.direction, {}, [])}>
           <img className={classNames(styles.image, {}, [])} src={image} />
           <p className={classNames(styles.subtitle, {}, [])}>Брейкинг</p>
         </div>

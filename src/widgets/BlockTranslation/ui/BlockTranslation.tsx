@@ -12,10 +12,10 @@ interface BlockTranslationProps {
 export const BlockTranslation: FC<BlockTranslationProps> = ({ className }) => {
   return (
     <section className={classNames(styles.section, {}, [className])}>
-      <article className={classNames(styles.mainContainer, {}, [className])}>
+      <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/live' isLink={true} name='Трансляции' />
       <BlockSlider>
-        <div className={classNames(styles.player, {}, [className])}>
+        <div className={classNames(styles.player, {}, [])}>
           <div className={classNames(styles.video, {}, [])}>
             <PlayIcon />
           </div>

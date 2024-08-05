@@ -15,25 +15,25 @@ export const BlockMembers: FC<BlockMembersProps> = ({ className }) => {
       <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/members' isLink={true} name='Участники' />
       <BlockSlider>
-        <div className={classNames(styles.player, {}, [className])}>
+        <div className={classNames(styles.player, {}, [])}>
           <div className={classNames(styles.video, {}, [])}>
             <PlayIcon />
           </div>
           <p className={classNames(styles.subtitle, {}, [])}>Дмитрий Пономаренко</p>
         </div>
-        <div className={classNames(styles.player, {}, [className])}>
+        <div className={classNames(styles.player, {}, [])}>
           <div className={classNames(styles.video, {}, [])}>
             <PlayIcon />
           </div>
           <p className={classNames(styles.subtitle, {}, [])}>Дмитрий Пономаренко</p>
         </div>
-        <div className={classNames(styles.player, {}, [className])}>
+        <div className={classNames(styles.player, {}, [])}>
           <div className={classNames(styles.video, {}, [])}>
             <PlayIcon />
           </div>
           <p className={classNames(styles.subtitle, {}, [])}>Дмитрий Пономаренко</p>
         </div>
-        <div className={classNames(styles.player, {}, [className])}>
+        <div className={classNames(styles.player, {}, [])}>
           <div className={classNames(styles.video, {}, [])}>
             <PlayIcon />
           </div>

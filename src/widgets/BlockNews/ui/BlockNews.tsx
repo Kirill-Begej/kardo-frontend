@@ -14,7 +14,7 @@ export const BlockNews: FC<BlockNewsProps> = ({ className }) => {
       <article className={classNames(styles.mainContainer, {}, [])}>
       <Titles link='/news' isLink={true} name='Новости' />
         <BlockSlider>
-          <div className={classNames(styles.slide, {}, [className])}>
+          <div className={classNames(styles.slide, {}, [])}>
             <div className={classNames(styles.textSubtitle, {}, [])}>
               <p className={classNames(styles.name, {}, [])}>
                 Региональный этап: Кировская область
@@ -24,7 +24,7 @@ export const BlockNews: FC<BlockNewsProps> = ({ className }) => {
               <p className={classNames(styles.day, {}, [])}>10 июля</p>
             </div>
           </div>
-          <div className={classNames(styles.slide, {}, [className])}>
+          <div className={classNames(styles.slide, {}, [])}>
             <div className={classNames(styles.textSubtitle, {}, [])}>
               <p className={classNames(styles.name, {}, [])}>
                 Региональный этап: Кировская область
@@ -34,7 +34,7 @@ export const BlockNews: FC<BlockNewsProps> = ({ className }) => {
               <p className={classNames(styles.day, {}, [])}>10 июля</p>
             </div>
           </div>
-          <div className={classNames(styles.slide, {}, [className])}>
+          <div className={classNames(styles.slide, {}, [])}>
             <div className={classNames(styles.textSubtitle, {}, [])}>
               <p className={classNames(styles.name, {}, [])}>
                 Региональный этап: Кировская область
@@ -44,7 +44,7 @@ export const BlockNews: FC<BlockNewsProps> = ({ className }) => {
               <p className={classNames(styles.day, {}, [])}>10 июля</p>
             </div>
           </div>
-          <div className={classNames(styles.slide, {}, [className])}>
+          <div className={classNames(styles.slide, {}, [])}>
             <div className={classNames(styles.textSubtitle, {}, [])}>
               <p className={classNames(styles.name, {}, [])}>
                 Региональный этап: Кировская область

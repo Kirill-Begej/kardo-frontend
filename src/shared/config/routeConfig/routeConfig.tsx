@@ -1,6 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 import { OnboardingPage } from 'pages/OnboardingPage';
-import { NavBar } from 'pages/NavBar';
+import { Navbar } from 'widgets/Navbar';
 
 export enum AppRoutes {
   ONBOARDING = 'main',
@@ -19,6 +19,6 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
   },
   [AppRoutes.NAVBAR]: {
     path: RoutePath.navbar,
-    element: <NavBar />,
+    element: <Navbar />,
   },
 };

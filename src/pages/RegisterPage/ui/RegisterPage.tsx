@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import MainIcon from 'shared/ui/MainIcon/MainIcon';
-import { Form } from 'shared/ui/Form';
+import { Form } from 'entities/Form';
 import { AuthButton } from 'shared/ui/AuthButton/AuthButton';
 import { AppPageRoutePath, RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';

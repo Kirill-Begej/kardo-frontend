@@ -2,8 +2,10 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import MainIcon from 'shared/ui/MainIcon/MainIcon';
-import { Form } from 'shared/ui/Form';
-import { AuthButton } from 'shared/ui/AuthButton/AuthButton';
+import { Form } from 'entities/Form';
+import { Button } from 'shared/ui/Button/Button';
+import YandexIcon from 'shared/assets/images/icons/yandex_icon.svg';
+import VkontakteIcon from 'shared/assets/images/icons/vk_icon.svg';
 import { AppPageRoutePath, RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import cls from './LoginPage.module.css';
@@ -24,8 +26,14 @@ const LoginPage: FC = ({ className }: LoginPageProps) => {
           <span className={classNames(cls.line, {}, [])}></span>
         </div>
         <div className={classNames(cls.buttonRow, {}, [])}>
-          <AuthButton className={classNames('', {}, [cls.button])} type='Yandex' text='Яндекс'/>
-          <AuthButton className={classNames('', {}, [cls.button])} type='Vkontakte' text='Вконтакте'/>
+          <Button type='button' className={classNames(cls.authButton, {}, [])}>
+            <YandexIcon />
+            <span className={classNames(cls.text, {}, [])}>Яндекс</span>
+          </Button>
+          <Button type='button' className={classNames(cls.authButton, {}, [])}>
+            <VkontakteIcon />
+            <span className={classNames(cls.text, {}, [])}>Вконтакте</span>
+          </Button>
         </div>
         <div className={classNames(cls.registerRow, {}, [])}>
           <span className={classNames(cls.registerText, {}, [])}>Ещё нет аккаунта? </span>

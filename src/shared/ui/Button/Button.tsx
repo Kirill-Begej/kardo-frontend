@@ -4,20 +4,18 @@ import cls from './Button.module.css';
 
 interface ButtonProps {
   className?: string;
-  children: string;
+  children: any;
   type: 'button' | 'reset' | 'submit';
-  active?: boolean;
 }
 
 export const Button: FC<ButtonProps> = ({
   className,
   children,
   type,
-  active,
 }) => {
   return (
     <button
-      className={classNames(cls.button, { [cls.active]: active }, [className])}
+      className={classNames(cls.button, {}, [className])}
       type={type}
     >{children}</button>
   );

@@ -36,6 +36,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [2, {
       devDependencies: true,
     }],
+    'react/display-name': 0,
     '@typescript-eslint/no-shadow': 0,
     'global-require': 0,
   },

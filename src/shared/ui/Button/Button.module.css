@@ -1,0 +1,17 @@
+.button {
+  background-color: var(--grey-secondary);
+  border-radius: 2px;
+  border: none;
+  color: var(--grey-secondary-light);
+  cursor: auto;
+  font-family: var(--font-rubik-medium);
+  font-size: 14px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+.active {
+  background-color: var(--light-grey-primary);
+  color: var(--navbar-bg-color);
+  cursor: pointer;
+}

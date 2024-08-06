@@ -1,0 +1,37 @@
+.label {
+  min-height: 61px;
+  position: relative;
+}
+
+.input {
+  background: #1B1B1B;
+  border-radius: 2px;
+  border: 1px solid #1B1B1B;
+  color: #F1F1F1;
+  font-family: var(--font-rubik-light);
+  font-size: 16px;
+  line-height: 19px;
+  outline: none;
+  padding: 11px 16px;
+  width: 100%;
+}
+
+.errorInput {
+  border: 1px solid var(--error-color);
+}
+
+.errorText {
+  color: var(--error-color);
+  display: block;
+  font-family: var(--font-rubik-regular);
+  font-size: 12px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  top: 7px;
+  right: 16px;
+  cursor: pointer;
+}

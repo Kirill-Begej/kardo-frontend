@@ -12,6 +12,7 @@
   height: 100vh;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -123,6 +124,13 @@
   right: 4%;
   top: 9.6%;
   z-index: 15;
+}
+
+.closeIcon {
+  display: block;
+  height: 24px;
+  stroke: var(--secondary-font-color);
+  width: 24px;
 }
 
 .buttonContainer {

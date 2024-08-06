@@ -1,15 +1,18 @@
 import { RouteProps } from 'react-router-dom';
 import { OnboardingPage } from 'pages/OnboardingPage';
-import { Navbar } from 'widgets/Navbar';
+import { LoginPage } from 'pages/LoginPage';
+import { RegisterPage } from 'pages/RegisterPage';
 
 export enum AppRoutes {
   ONBOARDING = 'main',
-  NAVBAR = 'navbar',
+  LOGIN = 'login',
+  REGISTER = 'register',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ONBOARDING]: '/',
-  [AppRoutes.NAVBAR]: '/nav',
+  [AppRoutes.LOGIN]: '/login',
+  [AppRoutes.REGISTER]: '/register',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -17,8 +20,12 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePath.main,
     element: <OnboardingPage />,
   },
-  [AppRoutes.NAVBAR]: {
-    path: RoutePath.navbar,
-    element: <Navbar />,
+  [AppRoutes.LOGIN]: {
+    path: RoutePath.login,
+    element: <LoginPage />,
+  },
+  [AppRoutes.REGISTER]: {
+    path: RoutePath.register,
+    element: <RegisterPage />,
   },
 };

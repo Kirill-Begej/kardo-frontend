@@ -8,14 +8,14 @@ import { Notification } from 'widgets/Settings/Notification';
 import { Safe } from 'widgets/Settings/Safe';
 import { SignOut } from 'widgets/Settings/SignOut';
 import { Support } from 'widgets/Settings/Support';
-import styles from './SettingsPage.module.css';
+import cls from './SettingsPage.module.css';
 
 const SettingsPage: FC = () => {
   return (
-    <section className={classNames(styles.settings, {}, [])}>
-      <div className={classNames(styles.block, {}, [])}>
+    <section className={classNames(cls.settings, {}, [])}>
+      <div className={classNames(cls.block, {}, [])}>
         <HeaderMain to='/' name='Настройки' />
-        <main className={styles.content}>
+        <main className={cls.content}>
           <General />
           <Notification />
           <Confidentiality />

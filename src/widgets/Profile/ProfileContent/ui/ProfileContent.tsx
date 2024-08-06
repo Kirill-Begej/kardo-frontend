@@ -1,46 +1,46 @@
 import card from 'shared/assets/images/Profile/card.jpeg';
 import Plus from 'shared/assets/images/icons/Plus.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
-import styles from './ProfileContent.module.css';
+import cls from './ProfileContent.module.css';
 
 export const ProfileContent = () => {
   return (
-    <section className={classNames(styles.content, {}, [])}>
-      <div className={classNames(styles.container, {}, [])}>
-        <ul className={classNames(styles.picker, {}, [])}>
-          <li className={classNames(styles.pick, {}, [styles.pickActive])}>
-            <p className={classNames(styles.text, {}, [styles.activeText])}>Все</p>
+    <section className={classNames(cls.content, {}, [])}>
+      <div className={classNames(cls.container, {}, [])}>
+        <ul className={classNames(cls.picker, {}, [])}>
+          <li className={classNames(cls.pick, {}, [cls.pickActive])}>
+            <p className={classNames(cls.text, {}, [cls.activeText])}>Все</p>
           </li>
-          <li className={classNames(styles.pick, {}, [])}>
-            <p className={classNames(styles.text, {}, [])}>Фото</p>
+          <li className={classNames(cls.pick, {}, [])}>
+            <p className={classNames(cls.text, {}, [])}>Фото</p>
           </li>
-          <li className={classNames(styles.pick, {}, [])}>
-            <p className={classNames(styles.text, {}, [])}>Видео</p>
+          <li className={classNames(cls.pick, {}, [])}>
+            <p className={classNames(cls.text, {}, [])}>Видео</p>
           </li>
         </ul>
-        <ul className={classNames(styles.gallery, {}, [])}>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+        <ul className={classNames(cls.gallery, {}, [])}>
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.item, {}, [])}>
-            <img className={classNames(styles.image, {}, [])} src={card} alt='Картинка' />
+          <li className={classNames(cls.item, {}, [])}>
+            <img className={classNames(cls.image, {}, [])} src={card} alt='Картинка' />
           </li>
-          <li className={classNames(styles.addItem, {}, [])}>
+          <li className={classNames(cls.addItem, {}, [])}>
             <Plus />
           </li>
         </ul>

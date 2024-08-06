@@ -29,6 +29,7 @@
 
 .pick {
   width: 250px;
+  cursor: pointer;
 }
 
 .pick.pickActive {

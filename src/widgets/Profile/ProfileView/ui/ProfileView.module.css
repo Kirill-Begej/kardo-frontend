@@ -13,13 +13,20 @@
 .link {
   margin: 0;
   display: flex;
-  padding: 11px 16px 0 11px;
+  padding: 11px 16px;
   gap: 16px;
   text-decoration: none;
   align-items: center;
-  justify-content: center;
   background-color: #1B1B1B;
   border-radius: 4px 4px 0 0;
+}
+
+.line {
+  width: calc(100% - 60px);
+  margin: 0 0 0 60px;
+  height: 1px;
+  background-color: #6D6D6D;
+  opacity: .5;
 }
 
 .svg {
@@ -35,12 +42,6 @@
   margin: 0;
   width: 100%;
   justify-content: space-between;
-  padding-bottom: 11px;
-  border-bottom: 1px solid gray;
-}
-
-.calendar {
-  border: none;
 }
 
 .linkText {

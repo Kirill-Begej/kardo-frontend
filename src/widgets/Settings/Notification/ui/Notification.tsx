@@ -2,28 +2,28 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Link } from 'react-router-dom';
 import ArrowRight from 'shared/assets/images/icons/chevronRight.svg';
 import { FC } from 'react';
-import styles from './Notification.module.css';
+import cls from './Notification.module.css';
 
 export const Notification: FC = () => {
   return (
-    <section className={classNames(styles.notification, {}, [])}>
-      <div className={classNames(styles.mainContainer, {}, [])}>
-        <p className={styles.title}>Уведомление</p>
-        <div className={classNames(styles.note, {}, [])}>
-          <div className={classNames(styles.block, {}, [])}>
-            <p className={classNames(styles.textLink, {}, [])}>Уведомление</p>
-            <label className={classNames(styles.button, {}, [])}>
+    <section className={classNames(cls.notification, {}, [])}>
+      <div className={classNames(cls.mainContainer, {}, [])}>
+        <p className={cls.title}>Уведомление</p>
+        <div className={classNames(cls.note, {}, [])}>
+          <div className={classNames(cls.block, {}, [])}>
+            <p className={classNames(cls.textLink, {}, [])}>Уведомление</p>
+            <label className={classNames(cls.button, {}, [])}>
               <input
-                className={classNames(styles.checkbox)}
+                className={classNames(cls.checkbox)}
                 type='checkbox'
                 placeholder='Чекбокс для уведомления'
               />
-              <span className={styles.switch}></span>
+              <span className={cls.switch}></span>
             </label>
           </div>
-          <div className={styles.line}></div>
-          <Link to='/' className={classNames(styles.link, {}, [])}>
-            <p className={classNames(styles.textLink)}>Настройки уведомлений</p>
+          <div className={cls.line}></div>
+          <Link to='/' className={classNames(cls.link, {}, [])}>
+            <p className={classNames(cls.textLink)}>Настройки уведомлений</p>
             <ArrowRight />
           </Link>
         </div>

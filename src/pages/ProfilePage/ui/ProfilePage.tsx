@@ -5,7 +5,7 @@ import { ProfileContent } from 'widgets/Profile/ProfileContent';
 import { ProfileInfo } from 'widgets/Profile/ProfileInfo';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
-import styles from './ProfilePage.module.css';
+import cls from './ProfilePage.module.css';
 
 interface ProfileProrps {
   className?: string
@@ -13,10 +13,10 @@ interface ProfileProrps {
 
 const ProfilePage: FC<ProfileProrps> = ({ className }) => {
   return (
-    <div className={classNames(styles.profile, {}, [className])}>
-      <div className={classNames(styles.block, {}, [])}>
+    <div className={classNames(cls.profile, {}, [className])}>
+      <div className={classNames(cls.block, {}, [])}>
         <HeaderMain to='/' name='Профиль' />
-        <main className={classNames(styles.content, {}, [])}>
+        <main className={classNames(cls.content, {}, [])}>
           <ProfileInfo />
           <ProfileHobby />
           <ProfileView />

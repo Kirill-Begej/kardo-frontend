@@ -7,8 +7,11 @@ interface MainProps {
 
 export const Main = ({ className }: MainProps) => {
   return (
-    <div className={classNames(cls.main, {}, [className])}>
-      main page
-    </div>
+    <main className={classNames(cls.main, {}, [className])}>
+      <div className={classNames(cls.content, {}, [])}>
+
+      </div>
+      <div className={classNames(cls.indent, {}, [])}></div>
+    </main>
   );
 };

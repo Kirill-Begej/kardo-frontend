@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Outlet } from 'react-router-dom';
-import { Navbar } from 'shared/ui/Navbar';
+import { Navbar } from 'entities/Navbar';
 import cls from './AppPage.module.css';
 
 interface AppPageProps {

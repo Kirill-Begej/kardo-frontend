@@ -6,7 +6,7 @@ import {
   useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useValidation } from 'features/hooks/useValidation';
+import { useValidation } from 'shared/lib/hooks/useValidation';
 import { Input } from 'shared/ui/Input/Input';
 import { Button } from 'shared/ui/Button/Button';
 import cls from './Form.module.css';

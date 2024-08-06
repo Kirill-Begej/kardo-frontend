@@ -1,6 +1,6 @@
 import './styles/index.css';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppRouter } from 'app/providers/router';
+import { AppRouter } from 'app/providers/AppRouter';
 
 const App = () => {
   return (

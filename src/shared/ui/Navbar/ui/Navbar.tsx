@@ -1,5 +1,4 @@
 import {
-  FC,
   useEffect,
   useRef,
   useState,
@@ -13,7 +12,7 @@ interface NavbarProps {
   className?: string;
 }
 
-export const Navbar: FC = ({ className }: NavbarProps) => {
+export const Navbar = ({ className }: NavbarProps) => {
   const [activeIcon, setActiveIcon] = useState(0);
   const [activeText, setActiveText] = useState(navbarData[activeIcon].text);
   const textRef = useRef(null);

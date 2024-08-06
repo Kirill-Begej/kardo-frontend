@@ -2,9 +2,9 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import MainIcon from 'shared/ui/MainIcon/MainIcon';
-import { Form } from 'widgets/Form';
+import { Form } from 'shared/ui/Form';
 import { AuthButton } from 'shared/ui/AuthButton/AuthButton';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { AppPageRoutePath, RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { CloseLink } from 'shared/ui/CloseLink/CloseLink';
 import cls from './RegisterPage.module.css';
 
@@ -35,7 +35,12 @@ const RegisterPage: FC = ({ className }: RegisterPageProps) => {
           Уже есть аккаунт? <Link to={RoutePath.login} className={cls.link}>Войти</Link>
         </div>
       </div>
-      <CloseLink to='/' className={classNames(cls.close, {}, [cls.closeText])}>Пропустить</CloseLink>
+      <CloseLink
+        to={ AppPageRoutePath.main }
+        className={classNames(cls.close, {}, [cls.closeText])}
+      >
+        Пропустить
+      </CloseLink>
     </section>
   );
 };

@@ -49,6 +49,18 @@
   width: 100%;
 }
 
+.authButton {  
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid #474747;
+  color: var(--light-grey-primary);  
+  display: flex;
+  flex: 0 1 50%;
+  gap: 8px;  
+  justify-content: center;
+  padding: 6px 0;
+}
+
 .button {
   flex: 0 1 50%;
 }

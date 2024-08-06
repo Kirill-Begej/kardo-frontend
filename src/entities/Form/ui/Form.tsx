@@ -68,7 +68,7 @@ export const Form: FC<FormProps> = ({ className, textSendButton }) => {
           icon={passwordIcon}
         />
       </div>
-      <Button type='submit' active={isValid}>{textSendButton}</Button>
+      <Button type='submit' className={classNames(cls.formButton, { [cls.formButtonActive]: isValid }, [])}>{textSendButton}</Button>
     </form>
   );
 };

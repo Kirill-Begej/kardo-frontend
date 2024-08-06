@@ -10,3 +10,16 @@
   flex-direction: column;
   gap: 12px;
 }
+
+.formButton {
+  background-color: var(--grey-secondary);  
+  color: var(--grey-secondary-light);  
+  padding: 12px 0;
+  width: 100%;
+}
+
+.formButtonActive {
+  background-color: var(--light-grey-primary);
+  color: var(--navbar-bg-color);
+  cursor: pointer;
+}

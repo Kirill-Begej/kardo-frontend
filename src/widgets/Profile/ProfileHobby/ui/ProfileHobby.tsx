@@ -1,10 +1,16 @@
 import PlusIcon from 'shared/assets/images/icons/Plus.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { FC } from 'react';
 import cls from './ProfileHobby.module.css';
 
-export const ProfileHobby = () => {
+interface ProfileHobbyProps {
+  className?: string;
+  isOpen: () => void;
+}
+
+export const ProfileHobby: FC<ProfileHobbyProps> = ({ className, isOpen }) => {
   return (
-    <section className={classNames(cls.hobby, {}, [])}>
+    <section className={classNames(cls.hobby, {}, [className])}>
       <div className={classNames(cls.hobbyContainer, {}, [])}>
         <div className={classNames(cls.card, {}, [])}>
           <h2 className={classNames(cls.title, {}, [])}>Интересы</h2>
@@ -24,7 +30,7 @@ export const ProfileHobby = () => {
             <li className={classNames(cls.item, {}, [])}>
               <p className={classNames(cls.heading, {}, [])}>Паркур</p>
             </li>
-            <li className={classNames(cls.itemPlus, {}, [])}>
+            <li onClick={isOpen} className={classNames(cls.itemPlus, {}, [])}>
               <PlusIcon />
             </li>
           </ul>

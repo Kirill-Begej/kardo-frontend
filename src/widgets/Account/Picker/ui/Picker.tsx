@@ -23,10 +23,10 @@ export const Picker: FC<PickerProps> = ({ onPick }) => {
           {pickerText.map((t, i) => {
             return (
               <li
-              key={i}
-              className={classNames(cls.pick, { [cls.pickActive]: activeForm === i }, [])}
-              onClick={() => handleChangeForm(i)}
-            >
+                key={i}
+                className={classNames(cls.pick, { [cls.pickActive]: activeForm === i }, [])}
+                onClick={() => handleChangeForm(i)}
+              >
               <p className={classNames(cls.text, { [cls.activeText]: activeForm === i }, [])}>
                 {t}
               </p>

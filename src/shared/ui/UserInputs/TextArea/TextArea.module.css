@@ -25,4 +25,5 @@
   color: #F1F1F1;
   font-family: var(--font-rubik-light);
   border: none;
+  resize: none;
 }

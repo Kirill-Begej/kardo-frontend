@@ -30,6 +30,15 @@
 .pick {
   width: 250px;
   cursor: pointer;
+  text-align: center;
+}
+
+.pick:first-of-type {
+  text-align: start;
+}
+
+.pick:last-of-type {
+  text-align: end;
 }
 
 .pick.pickActive {

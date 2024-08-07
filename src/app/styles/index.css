@@ -4,10 +4,11 @@
 .app {
   background-color: var(--primary-bg-color);
   display: flex;
-  min-height: 100vh;
   height: 100%;
   justify-content: center;
-  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .wrapper {

@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Date } from 'shared/ui/Date/Date';
+import { Button } from 'shared/ui/Button/Button';
 import cls from './Banner.module.css';
 
 interface BannerProps {
@@ -22,6 +23,7 @@ export const Banner = ({ className }: BannerProps) => {
           </div>
         </div>
       </div>
+      <Button type='button' className={classNames(cls.button, {}, [])}>Подать заявку</Button>
     </section>
   );
 };

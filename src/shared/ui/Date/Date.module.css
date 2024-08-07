@@ -1,21 +1,21 @@
 .date {
-  font-family: var(--font-grtsk-tera-bold);
-  font-size: 8px;
+  align-items: center;
   border-radius: 4px;
-  width: 46px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 8px;
+  width: 46px;
 }
 
 .black {
-  color: #000;
   background-color: var(--light-grey-primary);
+  color: #000;
 }
 
 .white {
-  color: var(--light-grey-primary);
   background-color: transparent;
+  color: var(--light-grey-primary);
 }
 
 .value {

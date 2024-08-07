@@ -1,18 +1,21 @@
 .banner {
   color: var(--light-grey-primary);
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-grtsk-tera-bold);
   font-size: 13.7px;
+  gap: 16px;
 }
 
 .container {
-  background-color: var(--primary-font-color);
-  height: 133px;
-  width: 100%;
   align-items: center;
-  justify-content: center;
+  background-color: var(--primary-font-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 133px;
+  justify-content: center;
+  width: 100%;
 }
 
 .text {
@@ -31,4 +34,14 @@
 .separator {
   font-size: 24px;
   letter-spacing: -2px;
+}
+
+.button {
+  align-self: center;
+  border: 1px solid var(--primary-font-color);
+  color: var(--light-grey-primary);
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 16px;
+  padding: 10px 0;
+  width: 89.74%;
 }

@@ -3,6 +3,6 @@ import { directionsSectionData } from 'features/DirectionsSection/model/directio
 
 export const DirectionsSection = () => {
   return (
-    <SectionSlider to='#' content='outside' slideSize='small' title='Направления' subtitle='Посмотреть все' data= {directionsSectionData} />
+    <SectionSlider to='#' content='outside' slideSize='small' title='Направления' subtitle='Посмотреть все' video={false} data= {directionsSectionData} />
   );
 };

@@ -14,6 +14,8 @@ interface SectionSliderProps {
   subtitle: string;
   data: TNewsSectionData[] | TDirectionsSectionsData[];
   slideSize: 'small' | 'normal' | 'large';
+  imageHeight?: 'large';
+  video: boolean;
 }
 
 export const SectionSlider = ({
@@ -24,6 +26,7 @@ export const SectionSlider = ({
   subtitle,
   slideSize,
   data,
+  video,
 }: SectionSliderProps) => {
   return (
     <section className={classNames(cls.sectionSlider, {}, [className])}>
@@ -31,7 +34,12 @@ export const SectionSlider = ({
         <Link to={to} className={classNames(cls.link, {}, [])}>
           <BlockTitle title={title} subtitle={subtitle} />
         </Link>
-        <BlockSlider content={content} slideSize={slideSize} data={data} />
+        <BlockSlider
+          content={content}
+          slideSize={slideSize}
+          data={data}
+          video={video}
+        />
       </div>
     </section>
   );

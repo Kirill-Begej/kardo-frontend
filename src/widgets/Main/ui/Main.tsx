@@ -3,6 +3,7 @@ import { Banner } from 'entities/Banner';
 import { Slider } from 'entities/Slider';
 import { NewsSection } from 'features/NewsSection';
 import { DirectionsSection } from 'features/DirectionsSection';
+import { MembersSections } from 'features/MembersSections';
 import cls from './Main.module.css';
 
 interface MainProps {
@@ -17,6 +18,7 @@ export const Main = ({ className }: MainProps) => {
         <Slider />
         <NewsSection />
         <DirectionsSection />
+        <MembersSections />
       </div>
       <div className={classNames(cls.indent, {}, [])}></div>
     </main>

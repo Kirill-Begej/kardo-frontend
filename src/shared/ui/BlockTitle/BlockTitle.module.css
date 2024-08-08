@@ -1,0 +1,18 @@
+.blockTitle {
+  display: flex;
+  justify-content: space-between;
+  color: var(--light-grey-primary);
+  font-family: var(--font-grtsk-tera-light);
+  font-size: calc(2vw + 2.2px);
+  align-items: end;
+}
+
+.title {
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: calc(2vw + 8.2px);;
+}
+
+.subtitle {
+  font-family: var(--font-grtsk-tera-light);
+  font-weight: initial;
+}

@@ -1,0 +1,60 @@
+.blockSlider {
+  list-style: none;
+  display: flex;
+  gap: 3.5%;
+}
+
+.item {
+  height: 0;
+  padding-bottom: 37.145%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1 0 57.146%;
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0 0 0 / 70%);
+  height: 27.69%;
+  padding-top: 2%;
+  padding-left: 4%;
+}
+
+.title {
+  font-weight: initial;
+  font-family: var(--font-grtsk-tera-light);
+  color: var(--light-grey-primary);
+  font-size: calc(2vw + 2.2px);
+}
+
+.subtitle {
+  display: block;
+}
+
+.date {
+  position: absolute;
+  right: 1.5%;
+  bottom: 30%;
+  font-family: var(--font-grtsk-tera-light);
+  color: var(--light-grey-primary);
+  font-size: calc(2vw + 2.2px);
+  border-radius: 2px;
+  background-color: rgba(0 0 0 / 70%);
+  padding: 2% 5%;
+}

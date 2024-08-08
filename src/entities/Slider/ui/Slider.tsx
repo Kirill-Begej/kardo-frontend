@@ -13,7 +13,9 @@ export const Slider = ({ className }: SliderProps) => {
         <ul className={classNames(cls.list, {}, [])}>
           {[...Array(5)].map((_, index) => (
             <li className={classNames(cls.item, {}, [])} key={index}>
-              <img src={SliderImage} alt="#" className={classNames(cls.image, {}, [])} />
+              <div className={classNames(cls.wrap, {}, [])}>
+                <img src={SliderImage} alt="#" className={classNames(cls.image, {}, [])} />
+              </div>
             </li>
           ))}
         </ul>

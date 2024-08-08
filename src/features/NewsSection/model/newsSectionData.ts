@@ -1,11 +1,11 @@
-export interface INewsSectionData {
+export type TNewsSectionData = {
   image: string;
   title: string;
   subtitle: string;
   date: string;
-}
+};
 
-export const newsSectionData: INewsSectionData[] = [
+export const newsSectionData: TNewsSectionData[] = [
   {
     image: `${require('shared/assets/images/News/news-1.jpg')}`,
     title: 'Региональный этап:',

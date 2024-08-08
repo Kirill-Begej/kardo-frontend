@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Banner } from 'entities/Banner';
 import { Slider } from 'entities/Slider';
 import { NewsSection } from 'features/NewsSection';
+import { DirectionsSection } from 'features/DirectionsSection';
 import cls from './Main.module.css';
 
 interface MainProps {
@@ -15,6 +16,7 @@ export const Main = ({ className }: MainProps) => {
         <Banner />
         <Slider />
         <NewsSection />
+        <DirectionsSection />
       </div>
       <div className={classNames(cls.indent, {}, [])}></div>
     </main>

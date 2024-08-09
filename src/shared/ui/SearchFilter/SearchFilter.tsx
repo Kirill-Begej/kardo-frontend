@@ -6,14 +6,17 @@ import cls from './SearchFilter.module.css';
 
 interface SearchFilterProps {
   className?: string;
+  isOpen: () => void;
 }
-export const SearchFilter: FC<SearchFilterProps> = ({ className }) => {
+export const SearchFilter: FC<SearchFilterProps> = ({ className, isOpen }) => {
   return (
     <label className={classNames(cls.label, {}, [className])}>
       <SearchIcon className={classNames(cls.searchIcon, {}, [])} />
       <div className={classNames(cls.block, {}, [])}>
         <input placeholder='Поиск' type='text' className={classNames(cls.input, {}, [])} />
-        <FilterIcon className={classNames(cls.filterIcon, {}, [])} />
+        <button className={classNames(cls.button, {}, [])}>
+          <FilterIcon onClick={isOpen} className={classNames(cls.filterIcon, {}, [])} />
+        </button>
       </div>
     </label>
   );

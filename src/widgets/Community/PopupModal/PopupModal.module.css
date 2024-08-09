@@ -1,0 +1,149 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0 0 0 / 50%);
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+  padding-top: 14px;
+}
+
+.titles {
+  display: flex;
+  gap: 40px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.clear {
+  margin: 0;
+  font-size: 17px;
+  font-family: var(--font-rubik-regular);
+  color: #F1F1F1;
+  line-height: 22px;
+  letter-spacing: -0.02rem;
+}
+
+.title {
+  font-size: 17px;
+  font-family: var(--font-grtsk-tera-bold);
+  margin: 0;
+  line-height: 22px;
+  letter-spacing: -0.02rem;
+  color: #FFF;
+}
+
+.closeButton {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 23px;
+  top: 33%;
+}
+
+.block {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 20px;
+  max-width: 69.7%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 8px;
+}
+
+.card {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #FF4310;
+  background-color: #1B1B1B;
+}
+
+.heading {
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 10px;
+  margin: 0;
+  color: #F1F1F1;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  margin: 16px auto 0;
+  border-radius: 4px;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 11px 16px;
+  background-color: #1B1B1B;
+}
+
+.all {
+  margin: 0;
+  font-size: 16px;
+  font-family: var(--font-rubik-light);
+  line-height: 19px;
+  color: #F1F1F1;
+}
+
+.choose {
+  margin: 0 12px 0 auto;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6D6D6D;
+  font-family: var(--font-rubik-light);
+}
+
+.line {
+  width: calc(100% - 19px);
+  height: 1px;
+  background-color: #6D6D6D;
+  opacity: .5;
+  margin: 0 0 0 19px;
+}
+
+.button {
+  border: 1px solid #FF4310;
+  background-color: #FF4310;
+  border-radius: 2px;
+  width: calc(100% - 20px);
+  text-align: center;
+  padding: 11px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F1F1F1;
+  line-height: 18px;
+  font-family: var(--font-rubik-medium);
+  font-size: 14px;
+  margin: 24px auto 52px;
+}

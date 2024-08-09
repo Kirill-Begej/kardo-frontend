@@ -1,0 +1,18 @@
+.sectionSlider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2%;
+}
+
+.container {
+  width: 89.74%;
+  gap: 3.5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: unset;
+}

@@ -31,18 +31,21 @@
 
 .titles {
   display: flex;
-  gap: 40px;
   width: calc(100% - 40px);
   margin: 0 auto;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .clear {
   margin: 0;
+  justify-items: flex-start;
   font-size: 17px;
   font-family: var(--font-rubik-regular);
   color: #F1F1F1;
   line-height: 22px;
   letter-spacing: -0.02rem;
+  text-align: start;
 }
 
 .title {
@@ -66,7 +69,7 @@
   list-style: none;
   padding: 0;
   margin: 32px 0 0 20px;
-  max-width: 69.7%;
+  max-width: 76.5%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

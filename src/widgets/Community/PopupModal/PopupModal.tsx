@@ -20,8 +20,8 @@ const textProps = [
   'Трикинг',
   'Графити',
   'Воркаут',
-  'Диджеинг',
   'Трюковой сомакат',
+  'Диджеинг',
 ];
 
 export const PopupModal: FC<PopupModalProps> = ({ className, isOpen, onClose }) => {

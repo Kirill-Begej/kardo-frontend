@@ -12,12 +12,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  text-align: center;
   box-sizing: border-box;
 }
 
 .title {
   font-family: var(--font-grtsk-tera-light);
-  max-width: 80px;
   width: 100%;
   font-size: 14px;
   line-height: normal;

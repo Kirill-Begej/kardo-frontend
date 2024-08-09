@@ -1,24 +1,17 @@
 import { RouteProps } from 'react-router-dom';
-import { ProfilePage } from 'pages/ProfilePage';
-import { AccountSettingsPage } from 'pages/AccountSettingsPage';
+import { CommunityPage } from 'pages/CommunityPage';
 
 export enum AppRoutes {
-  PROFILE = 'profile',
-  ACCOUNT = 'account',
+  COMMUNITY = 'community',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.PROFILE]: '/',
-  [AppRoutes.ACCOUNT]: '/account',
+  [AppRoutes.COMMUNITY]: '/',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.PROFILE]: {
-    path: RoutePath.profile,
-    element: <ProfilePage />,
-  },
-  [AppRoutes.ACCOUNT]: {
-    path: RoutePath.account,
-    element: <AccountSettingsPage />,
+  [AppRoutes.COMMUNITY]: {
+    path: RoutePath.community,
+    element: <CommunityPage />,
   },
 };

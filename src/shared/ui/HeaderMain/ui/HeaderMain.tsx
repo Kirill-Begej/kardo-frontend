@@ -10,19 +10,27 @@ interface HeaderProrps {
   name: string;
   to?: string;
   className?: string;
+  isUserProfile: boolean;
+  isMainPage: boolean;
 }
 
-export const HeaderMain: FC<HeaderProrps> = ({ name, className, to }) => {
+export const HeaderMain: FC<HeaderProrps> = ({
+  name, className, to, isUserProfile, isMainPage,
+}) => {
   return (
     <header className={classNames(cls.header, {}, [className])}>
       <article className={classNames(cls.headerContainer, {}, [])}>
         <h1 className={classNames(cls.title, {}, [])}>{name}</h1>
-        <Link to={to} className={classNames(cls.link, {}, [])}>
-          <BackIcon className={classNames(cls.svg, {}, [])} />
-        </Link>
-        <Link to='/settings' className={classNames(cls.button, {}, [])}>
-          <SettingsIcon />
-        </Link>
+        {isMainPage && (
+          <Link to={to} className={classNames(cls.link, {}, [])}>
+            <BackIcon className={classNames(cls.svg, {}, [])} />
+          </Link>
+        )}
+        {isUserProfile && (
+          <Link to='/settings' className={classNames(cls.button, {}, [])}>
+            <SettingsIcon />
+          </Link>
+        )}
       </article>
     </header>
   );

@@ -7,7 +7,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: calc(1vw + 4px);
   position: relative;
   width: 89.74%;
 }
@@ -44,15 +44,15 @@
 .pagination {
   align-self: center;
   display: flex;
-  gap: 12px;
+  gap: calc(1vw + 8px);
   list-style: none;
 }
 
 .point {
   background-color: #3c3c3c;
   border-radius: 50%;
-  height: 4px;
-  width: 4px;
+  height: calc(0.5vw + 2px);
+  width: calc(0.5vw + 2px);
 }
 
 .active {

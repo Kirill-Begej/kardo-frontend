@@ -4,7 +4,10 @@ import { Slider } from 'entities/Slider';
 import { NewsSection } from 'features/NewsSection';
 import { DirectionsSection } from 'features/DirectionsSection';
 import { MembersSections } from 'features/MembersSections';
+import { SectionLink } from 'entities/SectionLink';
 import { BroadcastsSection } from 'features/BroadcastsSection';
+import ExpectationsImage from 'shared/assets/images/Expectations/expectations.png';
+import ExpertsImage from 'shared/assets/images/Experts/experts.png';
 import cls from './Main.module.css';
 
 interface MainProps {
@@ -20,7 +23,9 @@ export const Main = ({ className }: MainProps) => {
         <NewsSection />
         <DirectionsSection />
         <MembersSections />
+        <SectionLink title='Что вас ждет?' to='#' image={ExpectationsImage} />
         <BroadcastsSection />
+        <SectionLink title='О наших экспертах' to='#' image={ExpertsImage} />
       </div>
       <div className={classNames(cls.indent, {}, [])}></div>
     </main>

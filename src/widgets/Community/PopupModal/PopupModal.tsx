@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import ArrowRight from 'shared/assets/images/icons/chevronRight.svg';
+import CloseIcon from 'shared/assets/images/icons/close_icon.svg';
 import cls from './PopupModal.module.css';
 
 interface PopupModalProps {
@@ -18,7 +19,7 @@ const textProps = [
   'BMX',
   'Хип-хоп',
   'Трикинг',
-  'Графити',
+  'Граффити',
   'Воркаут',
   'Трюковой сомакат',
   'Диджеинг',
@@ -29,8 +30,13 @@ export const PopupModal: FC<PopupModalProps> = ({ className, isOpen, onClose }) 
     <div className={classNames(cls.popup, { [cls.open]: isOpen }, [className])}>
       <div className={classNames(cls.container, {}, [])}>
         <div className={classNames(cls.titles, {}, [])}>
-          <p className={classNames(cls.clear, {}, [])}>Отчистить</p>
-          <h1 className={classNames(cls.title, {}, [])}>Фильтры</h1>
+          <div className={classNames(cls.names, {}, [])}>
+            <p className={classNames(cls.clear, {}, [])}>Отчистить</p>
+            <h1 className={classNames(cls.title, {}, [])}>Фильтры</h1>
+          </div>
+          <button onClick={onClose} className={classNames(cls.closeButton, {}, [])}>
+            <CloseIcon className={classNames(cls.svg, {}, [])} />
+          </button>
         </div>
         <ul className={classNames(cls.block, {}, [])}>
           {textProps.map((text, i) => {
@@ -49,19 +55,24 @@ export const PopupModal: FC<PopupModalProps> = ({ className, isOpen, onClose }) 
           </div>
           <div className={classNames(cls.line, {}, [])}></div>
           <div className={classNames(cls.country)}>
-            <p className={classNames(cls.all, {}, [])}>Страна</p>
+            <p className={classNames(cls.all, {}, [])}>Город</p>
             <p className={classNames(cls.choose, {}, [])}>Все</p>
             <ArrowRight />
           </div>
           <div className={classNames(cls.line, {}, [])}></div>
           <div className={classNames(cls.country)}>
-            <p className={classNames(cls.all, {}, [])}>Страна</p>
-            <p className={classNames(cls.choose, {}, [])}>Все</p>
-            <ArrowRight />
+            <p className={classNames(cls.all, {}, [])}>Участник</p>
+            <label className={classNames(cls.label, {}, [])}>
+              <input
+                className={classNames(cls.checkbox)}
+                type='checkbox'
+                placeholder='Чекбокс для уведомления'
+              />
+              <span className={cls.switch}></span>
+            </label>
           </div>
         </div>
         <button className={classNames(cls.button, {}, [])}>Показать результаты</button>
-        <button onClick={onClose} className={classNames(cls.closeButton, {}, [])}></button>
       </div>
     </div>
   );

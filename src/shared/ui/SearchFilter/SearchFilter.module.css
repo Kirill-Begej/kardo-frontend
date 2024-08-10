@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin: 20px 0 0;
+  margin: 0;
   border-radius: 2px;
   border: 1px solid #F1F1F1;
   padding: 10px 12px;
@@ -40,4 +40,14 @@
 .button {
   background-color: transparent;
   border: none;
+}
+
+.cancle {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #6D6D6D;
+  font-family: var(--font-rubik-light);
+  line-height: 19px;
+  letter-spacing: -0.02rem;
 }

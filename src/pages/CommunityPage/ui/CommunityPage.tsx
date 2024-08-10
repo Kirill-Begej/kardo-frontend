@@ -26,13 +26,13 @@ const CommunityPage: FC<CommunityPageProps> = ({ className }) => {
       <div className={classNames(cls.container, {}, [])}>
         <HeaderMain isMainPage={false} isUserProfile={false} to='/' name='Комьюнити' />
         <main className={classNames(cls.content, {}, [])}>
-        <section className={classNames(cls.section, {}, [])}>
-          <div className={classNames(cls.mainContainer)}>
-            <SearchFilter isOpen={handleOpenPopup} />
-          </div>
-        </section>
-        <PeopleSection />
-        <PopupModal isOpen={isPopupOpen} onClose={handleClosePopup} />
+          <section className={classNames(cls.section, {}, [])}>
+            <div className={classNames(cls.mainContainer)}>
+              <SearchFilter isOpen={handleOpenPopup} />
+            </div>
+          </section>
+          <PeopleSection />
+          <PopupModal isOpen={isPopupOpen} onClose={handleClosePopup} />
         </main>
       </div>
     </div>

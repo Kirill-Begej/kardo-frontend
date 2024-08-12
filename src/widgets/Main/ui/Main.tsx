@@ -14,7 +14,7 @@ interface MainProps {
   className?: string;
 }
 
-export const Main = ({ className }: MainProps) => {
+const Main = ({ className }: MainProps) => {
   return (
     <main className={classNames(cls.main, {}, [className])}>
       <div className={classNames(cls.content, {}, [])}>
@@ -31,3 +31,5 @@ export const Main = ({ className }: MainProps) => {
     </main>
   );
 };
+
+export default Main;

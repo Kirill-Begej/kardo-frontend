@@ -9,6 +9,7 @@ import AboutIcon from 'shared/assets/images/icons/navbar_icons/about.svg';
 import AboutIconActive from 'shared/assets/images/icons/navbar_icons/about_active.svg';
 import ProfileIcon from 'shared/assets/images/icons/navbar_icons/profile.svg';
 import ProfileIconActive from 'shared/assets/images/icons/navbar_icons/profile_active.svg';
+import { AppPageRoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from '../ui/Navbar.module.css';
 
 interface INavbarData {
@@ -21,7 +22,7 @@ interface INavbarData {
 
 export const navbarData: INavbarData[] = [
   {
-    to: '#',
+    to: AppPageRoutePath.main,
     icon: <HomeIcon className={cls.icon} />,
     activeIcon: <HomeIconActive className={cls.icon} />,
     text: 'Главная',
@@ -49,7 +50,7 @@ export const navbarData: INavbarData[] = [
     position: '57.75%',
   },
   {
-    to: '#',
+    to: AppPageRoutePath.profile,
     icon: <ProfileIcon className={cls.icon} />,
     activeIcon: <ProfileIconActive className={cls.icon} />,
     text: 'Профиль',

@@ -1,0 +1,56 @@
+.userProfile {
+  background-image: linear-gradient(rgba(0 0 0/ 69%), rgba(0 0 0 / 69%)), url('../../../shared/assets/images/UserSection/user_bg.jpg');
+  background-position: center 94%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: calc(20vw + 88px);
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: 2vw;
+  width: 89.74%;
+}
+
+.imageWrap {
+  flex: 1 0 23.43%;
+  height: 0;
+  padding-bottom: 23.43%;
+  position: relative;
+  width: 100%;
+}
+
+.imageContainer {
+  border-radius: 50%;
+  inset: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.text {
+  color: var(--light-grey-primary);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 76.57%;
+  font-family: var(--font-rubik-regular);
+  font-size: calc(1vw + 10px);
+  font-weight: initial;
+  line-height: 1.5;
+  
+}
+
+.name {
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: calc(1vw + 12px);
+}

@@ -3,6 +3,7 @@ import { OnboardingPage } from 'pages/OnboardingPage';
 import { LoginPage } from 'pages/LoginPage';
 import { RegisterPage } from 'pages/RegisterPage';
 import { Main } from 'widgets/Main';
+import { Profile } from 'widgets/Profile';
 
 export enum AppRoutes {
   ONBOARDING = 'onboarding',
@@ -12,6 +13,7 @@ export enum AppRoutes {
 
 export enum AppPageRoutes {
   MAIN = 'main',
+  PROFILE = 'profile',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -22,6 +24,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 
 export const AppPageRoutePath: Record<AppPageRoutes, string> = {
   [AppPageRoutes.MAIN]: '/main',
+  [AppPageRoutes.PROFILE]: '/profile',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -43,5 +46,9 @@ export const appPageRouterConfig: Record<AppPageRoutes, RouteProps> = {
   [AppPageRoutes.MAIN]: {
     path: AppPageRoutePath.main,
     element: <Main />,
+  },
+  [AppPageRoutes.PROFILE]: {
+    path: AppPageRoutePath.profile,
+    element: <Profile />,
   },
 };

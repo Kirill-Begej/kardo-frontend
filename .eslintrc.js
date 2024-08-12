@@ -39,5 +39,8 @@ module.exports = {
     'react/display-name': 0,
     '@typescript-eslint/no-shadow': 0,
     'global-require': 0,
+    'no-param-reassign': 0,
+    'array-callback-return': 0,
+    'consistent-return': 0,
   },
 };

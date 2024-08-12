@@ -1,0 +1,48 @@
+.content {
+  display: grid;
+  gap: calc(1vw + 3px);
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+}
+
+.item {
+  border-radius: 2px;
+  height: 0;
+  padding-bottom: 97.55%;
+  position: relative;
+}
+
+.image {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.overlay {
+  align-items: center;
+  background-color: rgba(0 0 0 / 65%);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+}
+
+.playIcon {
+  height: 39.86%;
+  width: 39.86%;
+}
+
+.add {
+  border: 1px solid var(--primary-font-color);
+}
+
+.plusIcon {
+  height: 30.2%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30.2%;
+}

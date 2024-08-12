@@ -1,0 +1,62 @@
+.buttonSetting {
+  align-items: center;
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttonBorderRadiusTopLeftAndRight {
+  border-bottom-left-radius: initial;
+  border-bottom-right-radius: initial;
+}
+
+.buttonBorderRadiusBottomLeftAndRight {
+  border-top-left-radius: initial;
+  border-top-right-radius: initial;
+}
+
+.iconWrap {
+  flex: 1 0 4.57%;
+  padding: 22px 0;
+}
+
+.iconPresent {
+  display: flex;
+  flex: 1 0 17.5%;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.icon {
+  display: block;
+  width: calc(1vw + 20.1px);
+}
+
+.button {
+  align-items: center;
+  display: flex;
+  flex: 1 0 95.43%;
+  justify-content: space-between;
+  padding: 12px 16px 12px 0;
+}
+
+.buttonSeparator {
+  border-bottom: 1px solid rgba(84 84 84 / 65%);
+}
+
+.buttonWithIcon {
+  flex: 1 0 82.5%;
+}
+
+.text {
+  color: var(--light-grey-primary);
+  font-family: var(--font-rubik-light);
+  font-size: calc(1vw + 12px);
+}
+
+.iconArrow {
+  display: block;
+  width: calc(1vw + 4.1px);
+}

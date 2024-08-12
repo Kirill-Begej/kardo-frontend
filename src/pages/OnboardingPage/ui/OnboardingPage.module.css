@@ -1,0 +1,150 @@
+@keyframes slide-animation {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.onboard {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  align-items: end;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.thirdSlide {
+  background-position: 45% top;
+}
+
+.fifthSlide {
+  background-position: 55% 50%;
+}
+
+.fourthSlide {
+  background-position: 58% 50%;
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse; 
+  gap: 68px;
+  padding-top: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.gradient {
+  background: linear-gradient(0deg, rgb(21 21 21 / 90%) 91%, rgb(21 21 21 / 0%) 100%);
+  inset: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 126px;
+  gap: 16px;
+  line-height: 1.25;
+  list-style: none;
+  margin: 0;
+  max-width: 350px;
+  padding: 0;
+  text-align: center;
+}
+
+.title {
+  color: var(--primary-font-color);
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.subtitle {
+  color: var(--secondary-font-color);
+  font-family: var(--font-rubik-semibold);
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  display: flex;
+  gap: 12px;
+  max-width: 248px;
+  margin-bottom: 9.4vh;
+}
+
+.slide {
+  background-color: var(--secondary-font-color);
+  border-radius: 10px;
+  height: 4px;
+  transition: width 0.5s ease-in-out;
+  width: 32px;
+}
+
+.positionUp {
+  position: relative;
+  z-index: 10;
+}
+
+.active {
+  animation-fill-mode: forwards;
+  animation-name: slide-animation;
+  animation-timing-function: linear;
+  background-image: linear-gradient(to left, var(--secondary-font-color) 50%, var(--primary-font-color) 50%);
+  background-size: 200%;
+  border-radius: 10px;
+  width: 72px;
+}
+
+.noactive {
+  background-color: var(--primary-font-color);
+}
+
+.closeLink {
+  position: absolute;  
+  right: 4%;
+  top: 9.6%;
+  z-index: 15;
+}
+
+.closeIcon {
+  display: block;
+  height: 24px;
+  stroke: var(--secondary-font-color);
+  width: 24px;
+}
+
+.buttonContainer {
+  inset: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  height: 100vh;
+  padding: 0;
+  width: 50%;
+}

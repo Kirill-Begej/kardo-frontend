@@ -1,0 +1,50 @@
+.banner {
+  border-bottom: 1px solid var(--secondary-bg-color);
+  color: var(--light-grey-primary);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: calc(2vw + 5.8px);
+  gap: 4vw;
+  padding-bottom: 3.8vw;
+}
+
+.container {
+  align-items: center;
+  background-color: var(--primary-font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  height: calc(10vw + 94px);
+  justify-content: center;
+  width: 100%;
+}
+
+.text {
+  padding-top: 32px;
+}
+
+.date {
+  display: flex;
+  gap: 8px;
+}
+
+.time {
+  display: flex;
+  gap: calc(0.5vw + 0.5px);
+}
+
+.separator {
+  font-size: calc(1vw + 21px);
+  letter-spacing: -2px;
+}
+
+.button {
+  align-self: center;
+  border: 1px solid var(--primary-font-color);
+  color: var(--light-grey-primary);
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: calc(1vw + 12px);
+  padding: 10px 0;
+  width: 89.74%;
+}

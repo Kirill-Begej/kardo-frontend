@@ -1,0 +1,8 @@
+.button {
+  background-color: transparent;
+  border-radius: 2px;
+  border: none;
+  cursor: auto;
+  font-family: var(--font-rubik-medium);
+  font-size: 14px;
+}

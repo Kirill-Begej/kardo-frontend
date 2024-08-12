@@ -1,0 +1,23 @@
+@import url('../fonts.css');
+
+:root {
+  --primary-bg-color: #151515;
+  --secondary-bg-color: #1b1b1b;
+  --header-bg-color: #0d0d0d;
+  --navbar-bg-color: #000;
+  --error-color: #862308;
+  --light-grey-primary: #f1f1f1;
+  --grey-secondary: #525252;
+  --grey-secondary-light: #a3a3a3;
+  --grey-secondary-medium: #6d6d6d;
+  --grey-medium-secondary: #808080;
+  --font-grtsk-tera-light: 'Grtsk-Tera-Light', 'Arial', sans-serif;
+  --font-grtsk-tera-bold: 'Grtsk-Tera-Bold', 'Arial', sans-serif;
+  --font-rubik-light: 'Rubik-Light', 'Arial', sans-serif;
+  --font-rubik-regular: 'Rubik-Regular', 'Arial', sans-serif;
+  --font-rubik-medium: 'Rubik-Medium', 'Arial', sans-serif;
+  --font-rubik-semibold: 'Rubik-SemiBold', 'Arial', sans-serif;
+  --font-rubik-bold: 'Rubik-Bold', 'Arial', sans-serif;
+  --primary-font-color: #FF4310;
+  --secondary-font-color: #F1F1F1;
+}

@@ -1,0 +1,50 @@
+.navbarContent {
+  color: var(--grey-secondary-medium);
+  font-family: var(--font-grtsk-tera-light);
+  font-size: calc(1vw + 8.5px);
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin-bottom: 9px;
+}
+
+.item {
+  text-align: center;
+}
+
+.item:first-child {
+  text-align: start;
+}
+
+.item:last-child {
+  text-align: end;
+}
+
+.active {
+  color: var(--light-grey-primary);
+  font-family: var(--font-grtsk-tera-bold);
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.line {
+  background-color: var(--grey-secondary-medium);
+  height: 1px;
+  position: relative;
+  width: 100%;
+}
+
+.lineAvtive {
+  background-color: var(--light-grey-primary);
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: left .3s ease;
+}

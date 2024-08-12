@@ -1,0 +1,12 @@
+.contentProfile {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2vw;
+  width: 89.74%;
+}

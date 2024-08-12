@@ -1,0 +1,23 @@
+.date {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-grtsk-tera-bold);
+  font-size: calc(1vw + 4px);
+  width: calc(2vw + 39px);
+}
+
+.black {
+  background-color: var(--light-grey-primary);
+  color: #000;
+}
+
+.white {
+  background-color: transparent;
+  color: var(--light-grey-primary);
+}
+
+.value {
+  font-size: calc(1vw + 21px);
+}

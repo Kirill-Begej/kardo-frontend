@@ -1,0 +1,9 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Trophy">
+<path id="Vector" d="M5.25 5.25V10.4156C5.25 14.1375 8.23125 17.2219 11.9531 17.25C12.8435 17.2562 13.7263 17.0862 14.5506 16.7497C15.375 16.4133 16.1247 15.917 16.7564 15.2896C17.3882 14.6622 17.8896 13.916 18.2317 13.094C18.5739 12.272 18.75 11.3904 18.75 10.5V5.25C18.75 5.05109 18.671 4.86032 18.5303 4.71967C18.3897 4.57902 18.1989 4.5 18 4.5H6C5.80109 4.5 5.61032 4.57902 5.46967 4.71967C5.32902 4.86032 5.25 5.05109 5.25 5.25Z" stroke="#525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M9 21H15" stroke="#525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M12 17.25V21" stroke="#525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M18.5813 12H19.5C20.2957 12 21.0588 11.6839 21.6214 11.1213C22.184 10.5587 22.5 9.79565 22.5 9V7.5C22.5 7.30109 22.421 7.11032 22.2804 6.96967C22.1397 6.82902 21.949 6.75 21.75 6.75H18.75" stroke="#525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M5.43748 12H4.4906C3.69495 12 2.93189 11.6839 2.36928 11.1213C1.80667 10.5587 1.4906 9.79565 1.4906 9V7.5C1.4906 7.30109 1.56962 7.11032 1.71027 6.96967C1.85092 6.82902 2.04169 6.75 2.2406 6.75H5.2406" stroke="#525252" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -9,7 +9,7 @@ interface ProfileProps {
   className?: string;
 }
 
-const Profile = ({ className }: ProfileProps) => {
+export const Profile = ({ className }: ProfileProps) => {
   return (
     <div className={classNames(cls.profile, {}, [className])}>
       <HeaderMain
@@ -28,5 +28,3 @@ const Profile = ({ className }: ProfileProps) => {
     </div>
   );
 };
-
-export default Profile;

@@ -1,1 +1,1 @@
-export { ProfileAsync as Profile } from './ui/Profile.async';
+export { Profile } from './ui/Profile';

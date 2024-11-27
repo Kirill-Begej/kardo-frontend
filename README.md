@@ -35,7 +35,7 @@ ___
 ___
 
 ## Ссылка на деплой приложения
-[Kardo-Project](https://kardo-frontend-seven.vercel.app/)
+[Kardo-Project](https://kardo-frontend-zeta.vercel.app/)
 ___
 
 ## Полезные ссылки
